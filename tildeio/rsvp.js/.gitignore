@@ -1,0 +1,5 @@
+/node_modules
+/promise-tests/
+/promises-tests/
+/promises-aplus-tests/
+/.bundle

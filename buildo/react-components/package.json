@@ -1,0 +1,81 @@
+{
+  "name": "buildo-react-components",
+  "version": "0.3.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha",
+    "build": "rm -rf lib && mkdir lib && node-sass src --importer sass-importer.js --include-path node_modules -o lib && babel --loose --stage 0 --out-dir lib src",
+    "lint": "eslint src --fix",
+    "preversion": "npm run lint && npm run test && npm run build-examples",
+    "prepublish": "npm run build",
+    "build-kitchen-sink": "npm run clean && webpack --config kitchen-sink/webpack.config.build.js --progress",
+    "kitchen-sink": "npm run clean && webpack-dev-server --config kitchen-sink/webpack.config.js --progress --hot --inline",
+    "build-examples": "npm run clean && webpack --config examples/webpack.config.build.js --progress",
+    "start": "npm run clean && webpack-dev-server --config examples/webpack.config.js --progress --hot --inline && cp examples/index.html examples/build/index.html",
+    "clean": "rm -rf examples/build",
+    "generate-readmes": "node generateReadmes/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:buildo/react-components"
+  },
+  "keywords": [],
+  "author": "Francesco Cioria <francesco@buildo.io>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/buildo/react-components/issues"
+  },
+  "homepage": "https://github.com/buildo/react-components",
+  "dependencies": {
+    "classnames": "^2.2.3",
+    "lodash": "^3.10.1",
+    "mobile-detect": "^1.2.1",
+    "react-input-children": "^1.0.0",
+    "react-select": "^0.6.1",
+    "revenge": "^0.3.4",
+    "sass-flex-mixins": "^0.1.0",
+    "tcomb-react": "^0.8.11"
+  },
+  "devDependencies": {
+    "axios": "^0.8.1",
+    "babel": "^5.8.12",
+    "babel-eslint": "^4.0.5",
+    "babel-loader": "^5.3.2",
+    "component-playground": "^0.1.2",
+    "compression-webpack-plugin": "^0.2.0",
+    "css-loader": "^0.23.1",
+    "eslint": "^1.10.3",
+    "eslint-config-buildo": "github:buildo/eslint-config",
+    "eslint-loader": "^1.1.1",
+    "expect": "^1.13.4",
+    "extract-text-webpack-plugin": "^0.9.1",
+    "html-webpack-plugin": "^1.7.0",
+    "isparta-loader": "^2.0.0",
+    "mocha": "^2.3.4",
+    "node-libs-browser": "^0.5.3",
+    "node-sass": "^3.4.2",
+    "normalize-css": "^2.3.1",
+    "object-assign": "^4.0.1",
+    "raw-loader": "^0.5.1",
+    "rc-datepicker": "buildo/rc-datepicker",
+    "react": "^0.13.3 <0.14.0",
+    "react-autosize-textarea": "buildo/react-autosize-textarea",
+    "react-cookie-banner": "buildo/react-cookie-banner",
+    "react-docgen": "^2.6.0",
+    "react-input-children": "buildo/react-input-children",
+    "react-remarkable": "^1.1.1",
+    "react-router-transition-context": "^0.13.3",
+    "react-sidebar": "^1.1.0",
+    "react-vdom": "^0.5.0",
+    "require-dir": "^0.3.0",
+    "require-noop": "0.0.2",
+    "sass-loader": "^3.1.2",
+    "style-loader": "^0.13.0",
+    "webpack": "^1.12.9",
+    "webpack-dev-server": "^1.14.0"
+  },
+  "peerDependencies": {
+    "react": "^0.13.3 <0.14.0"
+  }
+}

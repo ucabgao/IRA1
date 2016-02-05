@@ -1,0 +1,32 @@
+{
+  "name": "finalbuilder-client",
+  "version": "0.0.0-alpha.1",
+  "description": "Wrapper to the FinalBuilder API",
+  "main": "./index.js",
+  "directories": {
+    "src": "src",
+    "lib": "lib",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha ./test/tests.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bigbam505/finalbuilder-client.git"
+  },
+  "keywords": [
+    "finalbuilder"
+  ],
+  "dependencies": {
+    "soap": "https://github.com/milewise/node-soap/tarball/master"
+  },
+  "devDependencies": {
+    "mocha": "1.8.2",
+    "should": "1.2.2",
+    "grunt": "~0.4.1",
+    "grunt-release": "~0.5.1"
+  },
+  "author": "Brent Montague <brent@bmontague.com>",
+  "license": "MIT"
+}

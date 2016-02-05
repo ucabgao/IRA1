@@ -1,0 +1,89 @@
+__NOTOC__
+
+==Description==
+Displays [http://www.xkcd.com/1190/ XKCD 1190 Time] in a navigable way. 
+
+We tried to make it fun too.
+
+==Features==
+===Navigation===
+Play button plays the frames back at 10 frames per second pausing for 2 seconds on Special Frames, both of these are adjustable with text boxes next to the play/pause button. Higher speeds benefit from preloading images first. It should be noted frames per second is not accurate even if all frames are preloaded.
+
+Play works in reverse now too, just because it seemed like a good idea at the time.
+
+The 'step through frames' will navigate through the frames one at a time. If playing this will pause.
+
+{| class="wikitable"
+|-
+| <nowiki>|<</nowiki> || Jump to First Frame
+|-
+| <nowiki><<</nowiki> || Previous Special Frame
+|-
+| <nowiki><</nowiki> || Previous Frame
+|-
+| <nowiki>></nowiki> || Next Frame
+|-
+| <nowiki>>></nowiki> || Next Special Frame
+|-
+| <nowiki>>|</nowiki> || Jump to Last Frame
+|}
+
+The left and right arrow keys work the same as the previous and next frame step through buttons.
+
+Hovering over the image or slider and scrolling with the mouse wheel will navigate through the frames as well. This will not pause playback. Fun Fact: this was the motivating feature for the whole project.
+
+===Special Frames===
+Most special frames are frames with text. The auto play now pauses for a user specified amount of time on these frames.
+
+There is a panel below the comic that can be opened to see all the special frames.
+
+This part is updated manually, so some of the latest special frames may not show up.
+
+===Previous Frame Difference===
+Shows the new pixels in green and removed pixels in red when compared to previous frame.
+
+===Image Difference From Frame===
+Same as above, except shows difference from a chosen frame.
+
+===Share Links===
+The text box below the slide bar allows for linking directly to a frame. The short bitly link only works for a normal frame link.
+
+There is an option to link frame differences.
+
+A couple of examples:
+
+[http://geekwagon.net/projects/xkcd1190?frame=890&framediff=217 Shows increase in sea level from maximum zoom to before fading]
+ ?frame=890&framediff=217
+
+[http://geekwagon.net/projects/xkcd1190?frame=162&framediff=126 Shows scale difference before and after zoom]
+ ?frame=162&framediff=126
+
+===Preloading===
+[https://github.com/MaPePeR MaPePeR] has outdone himself by adding code that preloads images for quicker playback. Clicking "Preload All" twice will load every image in the comic. The preloader also loads five frames ahead and three frames behind the current frame. In the preload indicator each frame is represented by 5 square pixels, the width is equal to 100 frames.
+
+{| class="wikitable"
+! Box Color !! Definition
+|-
+| Grey || Frame not loaded
+|-
+| Blue || Frame is loading
+|-
+| Black || Frame is loaded
+|-
+| Red || Something has gone wrong loading that frame
+|-
+| Yellow Border || Special Frame
+|-
+| Green Border || Current Frame
+|}
+
+==Thanks==
+* Big thanks to [https://github.com/MaPePeR MaPePeR] for contributing code (probably more than me now). It's been fun having someone so knowledgeable to work with.
+* Thanks to [https://github.com/aschrab Aaron Schrab] gave you cookies that take you to the last frame viewed.
+* Thanks for the feedback I've gotten from this project. It's been fun to work on a project people appreciate.
+
+
+==A Friendly Reminder==
+XKCD is licensed by [http://www.xkcd.com/about/ Randall Munroe] under a [http://www.xkcd.com/license.html Creative Commons Attribution-NonCommercial 2.5 License], so please give credit where it is due (because he's a cool guy as far as I know from being a regular reader of his comic).
+
+The code here, on the other hand, has [http://geekwagon.net/ufl/license.txt an "awful" license].
