@@ -1,0 +1,103 @@
+<div class="panel panel-primary" id="templateoptions">
+  <div class="panel-heading">
+    <h2 class="panel-title">3. Select template options</h2></div>
+  <div class="panel-body">
+<!--    <div class="btn-group" data-toggle="buttons">-->
+    {{# template.nooptions }}
+    No customizable options for this template.  You're good to go!
+    {{/ template.nooptions }}
+    {{^ template.nooptions }}
+    {{# template}}
+    {{^ istext}}
+      {{# isblank }}
+      <div class="odiv form-group has-feedback" id="{{ id }}" otype="blank">
+        <label class="control-label">{{ display }}</label>
+        <input class="oitem" type="text" class="form-control" placeholder="{{ default }}">
+<!--   TODO: Implement default and isblank in blank and form -->
+      </div>
+      {{/ isblank }}
+
+      {{# isform }}
+      <div class="odiv form-group has-feedback" id="{{ id }}" otype="form">
+        <label class="control-label">{{ display }}</label>
+        <textarea class="oitem form-control" rows="3" placeholder="{{ default }}"></textarea>
+<!--   TODO: Implement default and isblank in blank and form -->
+      </div>
+      {{/ isform }}
+      {{# ischeck }}
+      <form>
+      <div class="odiv checkbox" id="{{ id }}" otype="check">
+        <label><input class="oitem" type="checkbox"><b> {{ display }}</b></label>
+      </div>
+      </form>
+      {{/ ischeck }}
+      {{# isselect }}
+      <div class="odiv form-group has-feedback" id="{{ id }}" otype="select">
+        <label class="control-label">{{ display }}</label>
+        <select class="oitem form-control">
+          {{# options }}
+          <option output="{{ result }}">{{ display }}</option>
+          {{/ options }}
+        </select>
+      </div>
+      {{/ isselect }}
+    {{/ istext }}
+    {{/ template }}
+    {{/ template.nooptions }}
+  </div>
+</div>
+
+<button type="button" class="btn btn-success" id="buildnow">
+  &nbsp;<span class="octicon octicon-zap" aria-hidden="true"></span>
+  &nbsp;Build entire board <b>now</b>
+</button>
+<button type="button" class="btn btn-default" id="buildcustom">
+  <span class="octicon octicon-tools" aria-hidden="true"></span>
+  Customize
+</button>
+
+<script>
+function getuserfields() {
+  var fields = { };
+  $('.odiv').each(function(i) {
+    var id = $(this).prop('id');
+    var type = $(this).attr('otype');
+    var fielditem = $('#' + id + ' .oitem');
+    //get result
+    switch (type)
+    {
+      case 'check':
+        fields[id] = fielditem.prop('checked'); break;
+      case 'select':
+        fields[id] = $($('#' + id + ' .oitem option:selected')).attr('output'); break;
+      case 'form': case 'blank':
+        fields[id] = fielditem.val(); break;
+    }
+  });
+  //NOTE sort by i to ensure they are in order?
+  console.log(fields);
+  return fields;
+}
+
+$('#buildnow').click(function(event) {
+  $('#buildnow').prop("disabled", true);
+  $('#buildcustom').prop("disabled", true);
+  $.ajax({
+    url: '/build/now',
+    type: 'POST',
+    data: { token: QueryString.token, board: $('#selectboard label.active input').prop('id'), fields: getuserfields() },
+    success: function(data) {
+      console.log(data.url);
+      window.location.replace(data.url);
+    }
+  });
+});
+
+$('#buildcustom').click(function(event) {
+  $('#buildnow').prop("disabled", true);
+  $('#buildcustom').prop("disabled", true);
+  var fields = getuserfields();
+  var url = '/build/custom?token=' + QueryString.token + "&fields=" + JSON.stringify(fields) + "&board=" + $('#selectboard label.active input').prop('id');
+  window.location.replace(url);
+});
+</script>

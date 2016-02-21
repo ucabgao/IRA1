@@ -1,0 +1,36 @@
+<div class="alert alert-success" role="alert">
+  <h5><span class="octicon octicon-check"></span>
+Signed in as <b>{{user.name}}</b></h5>
+</div>
+
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h2 class="panel-title">1. Select a board</h2></div>
+  <div class="panel-body">
+    <div id="selectboard" class="btn-group" data-toggle="buttons">
+      {{# boards}}
+      <label class="btn btn-default">
+        <input type="radio" name="board" id="{{ uid }}" autocomplete="off">{{# public}}<span class="octicon octicon-repo"></span>{{/ public}}{{^ public}}<span class="octicon octicon-lock"></span>{{/ public}}&nbsp;{{ org }} / <b>{{ title }}</b>
+      </label><br>
+      {{/ boards}}
+    </div>
+  </div>
+</div>
+
+<script>
+  var selected_board = false;
+
+  $('#selectboard label').click(function() {
+    if (!selected_board) {
+      $.ajax({
+        url: '/build/templates?token=' + QueryString.token,
+        type: 'GET',
+        success: function(data) {
+          $('#contentfragment').append(data.templates);
+          selected_board = true;
+        }
+      });
+    }
+  });
+
+</script>

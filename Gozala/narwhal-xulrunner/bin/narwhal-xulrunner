@@ -1,0 +1,62 @@
+#!/bin/bash
+
+# Copyright (c) 2006 Irakli Gozalishvili <rfobic@gmail.com>
+# See the file LICENSE for licensing information.
+
+# get the absolute path of the executable
+SELF_PATH=$(cd -P -- "$(dirname -- "$0")" && pwd -P) && SELF_PATH=$SELF_PATH/$(basename -- "$0")
+
+# resolve symlinks
+while [ -h $SELF_PATH ]; do
+    DIR=$(dirname -- "$SELF_PATH")
+    SYM=$(readlink -- "$SELF_PATH")
+    SELF_PATH=$(cd -- "$DIR" && cd -- "$(dirname -- "$SYM")" && pwd)/$(basename -- "$SYM")
+done
+
+NARWHAL_ENGINE_HOME=$(dirname -- $(dirname -- "$SELF_PATH"))
+BOOTSTRAP="$NARWHAL_ENGINE_HOME/bootstrap.js"
+
+if [ ! "$NARWHAL_HOME" ]; then
+    NARWHAL_HOME=$(dirname -- $(dirname -- "$NARWHAL_ENGINE_HOME"))
+fi
+
+# collection arguments and exporting
+NARWHAL_ARGUMENTS=""
+for arg in $*; do
+    NARWHAL_ARGUMENTS=$NARWHAL_ARGUMENTS" "$arg
+done;
+
+export NARWHAL_PATH
+export NARWHAL_HOME
+export NARWHAL_ENGINE_HOME
+export NARWHAL_ARGUMENTS
+
+# uses rlwrap (readline wrapper) if present
+RLWRAP=$(which rlwrap 2>/dev/null)
+NARWHAL_SHELL="telnet localhost 4747"
+# APP_HOME
+NARWHAL_APP_HOME="$NARWHAL_ENGINE_HOME/app/application.ini"
+# find available XULRunner
+XULRUNNER=$(which xulrunner)
+if [ ! $(which $XULRUNNER) ]; then XULRUNNER=$(which firefox); fi
+if [ ! $(which $XULRUNNER) ]; then XULRUNNER=$(which /Applications/Firefox.app/Contents/MacOS/firefox-bin); fi
+
+# converting paths if running on cygwin
+if [ "$(which cygpath 2>/dev/null)" ]; then
+     export NARWHAL_HOME=$(cygpath -wa -- "$NARWHAL_HOME")
+     export NARWHAL_ENGINE_HOME=$(cygpath -wa -- "$NARWHAL_ENGINE_HOME")
+     BOOTSTRAP=$(cygpath -wa -- "$BOOTSTRAP")
+     XULRUNNER=$(cygpath -wa -- "$XULRUNNER")
+     NARWHAL_APP_HOME=$(cygpath -wa -- "$NARWHAL_APP_HOME")
+fi
+# narwhal app runner
+NARWHAL="$XULRUNNER -app $NARWHAL_APP_HOME -narwhal $BOOTSTRAP"
+
+if [ $(which $XULRUNNER) ]; then
+    $NARWHAL &
+    sleep 3;
+    $RLWRAP $NARWHAL_SHELL
+else
+    echo "Can't find nor xulrunner nor firefox on your system !!"
+fi
+

@@ -1,0 +1,33 @@
+<button type="button" class="btn btn-success" onclick="location.href='/login'">
+  <span class="octicon octicon-lock" aria-hidden="true"></span>
+  <b>Login to Trello</b> to build your board
+</button>
+
+<hr>
+
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h2 class="panel-title">{{# building}}<i class="fa fa-cog fa-spin"></i>{{/ building}}{{^ building}}<i class="fa fa-cog"></i>{{/ building}}Currently Building</h2></div>
+  <div class="panel-body">
+    <div id="replaceable-main">
+      {{> fragment }}
+    </div>
+  </div>
+</div>
+
+{{# queuecount}}
+<div class="panel panel-info">
+  <div class="panel-heading">
+    <h2 class="panel-title"><i class="fa fa-clock-o"></i>{{{queuecount}}} queued</h2>
+  </div>
+</div>
+{{/ queuecount}}
+
+<div class="panel panel-success">
+  <div class="panel-heading">
+    <h2 class="panel-title"><i class="glyphicon glyphicon-check"></i>Recently built</h2>
+  </div>
+  <div class="panel-body" id="replaceable-built">
+    {{> fragmentbuilt }}
+  </div>
+</div>

@@ -1,0 +1,17 @@
+<div class="panel-body">
+  <h4><i class="glyphicon glyphicon-ok"></i>Board successfully built!</h4>
+  <div class="btn-group centered">
+    <button class="btn btn-success dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
+      Download <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu" role="menu">
+      <li><a href="/build/{{ board.id }}.pdf"><b>Finalized PDF (.pdf)</b></a></li>
+      <li><a href="/build/{{ board.id }}.zip">LaTeX and assets (.zip)</a></li>
+      <li><a href="/build/{{ board.id }}.tex">Raw LaTeX document (.tex)</a></li>
+<!--      <li><a href="/build/{{ board.id }}.txt">Trello2LaTeX build summary (.txt)</a></li>-->
+      <li><a href="/build/{{ board.id }}.log">TeX build log (.log)</a></li>
+    </ul>
+  </div>
+  <br><hr>
+  <h5>Congratulations, we're done building your board! After building, we'll only store these files for a few hours.  Be sure to pick them up by then!</h5>
+</div>
