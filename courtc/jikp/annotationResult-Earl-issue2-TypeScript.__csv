@@ -1,0 +1,2 @@
+Project,Issue,Commit,TypeChecker,Detectable,Comment,AnnotationTime
+courtc/jikp,2,5fb2052b6437a43224a44041ccfec7782a8d2eb3,TypeScript,Unanalysed,malfunction/failure to realize specification.  Even if you defined a new type with the new hit range, it would not have prevented this issue, which, in that case, would have been to choose the wrong type.,114.0
