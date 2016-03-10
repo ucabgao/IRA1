@@ -1,2 +1,3 @@
 Project,Issue,Commit,TypeChecker,Detectable,Comment,AnnotationTime
 royriojas/persistify,2,5ff8fdf6dded64e8ee1fa2909448d1c6c35b1bda,Flow,Unanalysed,"EIS:  Emit correct error code.",39.0
+royriojas/persistify,2,5ff8fdf6dded64e8ee1fa2909448d1c6c35b1bda,Flow,Undetectable,"EIS:  Emit correct error code.",39.0
