@@ -1,0 +1,2 @@
+Project,Issue,Commit,TypeChecker,Detectable,Comment,AnnotationTime
+deplicator/xkcdTime_atyourownpace,47,b7698ef7b6f040040534f342b5c40aaea82a84ef,TypeScript,Undetectable,"This bug is a kind of range error.  The lowerbound could be enforced by a type system of the expressivity of Flow or TypeScript at the cost of adding operators to manipulate this type that prevent the lowerbound from being bound to a negative value.  The upperbound, however, is dynamic and would require a dependent type system to express.",87.0
