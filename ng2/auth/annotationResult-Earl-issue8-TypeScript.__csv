@@ -1,0 +1,2 @@
+Project,Issue,Commit,TypeChecker,Detectable,Comment,AnnotationTime
+ng2/auth,8,2783b21e9b7abf15ee7bf7562be64c96bfcc56b2,TypeScript,Unknown,"This is the second of two errors that seem intuitively to be detectable by TypeScript, but that I was unable to detect as such within our 10m time limit.  This is a candidate for a deep dive.  Intuitively, it would seem like we should just be able to type annotate the search function's parameters to rule out the boolean false, but I was unable to find where this function is defined in order to add the requisite annotation.",639.0
