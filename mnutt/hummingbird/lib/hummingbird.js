@@ -1,3 +1,4 @@
+/* @flow */
 var sys = require('sys'),
   fs = require('fs'),
   View = require('view').View,
