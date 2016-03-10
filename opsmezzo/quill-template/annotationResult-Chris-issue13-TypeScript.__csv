@@ -1,0 +1,2 @@
+Project,Issue,Commit,TypeChecker,Detectable,Comment,AnnotationTime
+opsmezzo/quill-template,13,3342f999fcf48fece0b45bddd0e63d0cfe18446e,TypeScript,Undetectable,"EIS: this just updates a method call adding optional parameters",81.0
