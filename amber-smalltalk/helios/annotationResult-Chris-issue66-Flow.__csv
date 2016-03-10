@@ -1,0 +1,2 @@
+Project,Issue,Commit,TypeChecker,Detectable,Comment,AnnotationTime
+amber-smalltalk/helios,66,280e38493882046fd155ded41894d3460c6b8f97,Flow,Undetectable,"this is transpiled from smalltalk files.  I have to assume that the transpiler outputs valid code (though smalltalk is dynamically typed).",278.0
