@@ -1,0 +1,6 @@
+t2lcompiler.js:15
+ 15: Declare class Card {
+             ^^^^^ Unexpected token class
+
+
+Found 1 error
