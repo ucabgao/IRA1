@@ -1,0 +1,2 @@
+Project,Issue,Commit,TypeChecker,Detectable,Comment,AnnotationTime
+pretenderjs/pretender,94,7df020470e4d0b31855b96e14eea49ab37b97f79,Flow,Undetectable,"EIS:  Failure to install correctly.",59.0
