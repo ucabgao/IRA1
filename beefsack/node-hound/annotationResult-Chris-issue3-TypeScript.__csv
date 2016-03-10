@@ -1,0 +1,2 @@
+Project,Issue,Commit,TypeChecker,Detectable,Comment,AnnotationTime
+beefsack/node-hound,3,c6f13b31808b5f0be2dc63946c7fd25841a387e4,TypeScript,Detectable,"this is debatable, but assuming the library was typed, the fix would have been found by typescript since the type of path no longer has existsSync.  the checked in .ts file exhibits the failure.",335.0
