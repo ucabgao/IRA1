@@ -1,3 +1,4 @@
+/* @flow */
 /**
 * @ngdoc service
 * @name ng2Auth.providers:routesProvider
@@ -42,6 +43,7 @@ angular
         logoutSuccess: null,
         locationChange: null,
       };
+
 
       /**
        * @description

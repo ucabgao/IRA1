@@ -10,7 +10,13 @@
 * @description
 * Service consumption docs.
 */
-///<reference path="angular.d.ts"/>
+var t = (function () {
+    function t() {
+    }
+    t.prototype.search = function (x) { };
+    ;
+    return t;
+}());
 angular
     .module('ng2Auth')
     .provider('Routes', function () {
