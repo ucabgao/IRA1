@@ -14,7 +14,7 @@ declare class File {
 }
 
 try {
-  var configJSON = fs.readFileSync(__dirname + "/../config/app.json");
+  var configJSON: File = fs.readFileSync(__dirname + "/../config/app.json");
 } catch(e) {
   sys.log("File config/app.json not found.  Try: `cp config/app.json.sample config/app.json`");
 }
