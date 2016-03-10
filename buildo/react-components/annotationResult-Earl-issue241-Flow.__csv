@@ -1,0 +1,2 @@
+Project,Issue,Commit,TypeChecker,Detectable,Comment,AnnotationTime
+buildo/react-components,241,618ec12cc2adc18a1011e11b7adaa663d6724c18,Flow,Undetectable,"EIS:  correct behavior by changing variables used in a conditional.",43.0
