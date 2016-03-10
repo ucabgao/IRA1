@@ -1,12 +1,12 @@
 // @flow weak
 import Ember from 'ember';
 
-declare interface EmberService{
+declare interface EmberObject{
 	extend(foo: any): Object;
 }
 
 declare interface EMBER {
-	Service: EmberService;
+	Service: EmberObject;
 }
 
 var Ember: EMBER;
