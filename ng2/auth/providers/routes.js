@@ -1,3 +1,4 @@
+/* @flow */
 /**
 * @ngdoc service
 * @name ng2Auth.providers:routesProvider
@@ -11,6 +12,10 @@
 * @description
 * Service consumption docs.
 */
+
+class t {
+search(x:Object):any {};
+}
 
 angular
 .module('ng2Auth')
@@ -39,6 +44,7 @@ angular
         locationChange: null,
       };
 
+
       /**
        * @description
        * The actual service.
@@ -46,7 +52,7 @@ angular
       return {
 
         $get: ['$rootScope', '$location', '$route', '$injector',
-        function ($rootScope, $location, $route, $injector) {
+        function ($rootScope, $location:t, $route, $injector) {
 
 
           if(!userService) {

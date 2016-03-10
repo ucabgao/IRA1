@@ -1,0 +1,2 @@
+Project,Issue,Commit,TypeChecker,Detectable,Comment,AnnotationTime
+ng2/auth,8,2783b21e9b7abf15ee7bf7562be64c96bfcc56b2,Flow,Detectable,"Flow, with a type annotation hack, detects this bug, in accordance with intuition.  It's a hack because I couldn't find the definition of the object bound to $location and therefore the definition of search.  Nonetheless, it approximates the annotation cost of the correctly placed annotation.",241.0
