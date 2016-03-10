@@ -1,0 +1,2 @@
+Project,Issue,Commit,TypeChecker,Detectable,Comment,AnnotationTime
+deplicator/xkcdTime_atyourownpace,47,b7698ef7b6f040040534f342b5c40aaea82a84ef,TypeScript,Undetectable,"missing predicate",0.0
