@@ -1,4 +1,4 @@
-// @flow weak
+// @flow
 var hammerhead   = window.getTestCafeModule('hammerhead');
 var browserUtils = hammerhead.utils.browser;
 var shadowUI     = hammerhead.shadowUI;
