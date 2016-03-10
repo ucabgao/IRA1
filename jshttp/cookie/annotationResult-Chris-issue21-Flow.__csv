@@ -1,0 +1,2 @@
+Project,Issue,Commit,TypeChecker,Detectable,Comment,AnnotationTime
+jshttp/cookie,21,faf389539824d5c973e4d9604ce89089941d820b,Flow,Undetectable,"fix regex",4.0
