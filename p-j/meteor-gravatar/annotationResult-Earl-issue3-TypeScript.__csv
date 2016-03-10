@@ -1,0 +1,2 @@
+Project,Issue,Commit,TypeChecker,Detectable,Comment,AnnotationTime
+p-j/meteor-gravatar,3,d5b70d91f92751e3b16b441c9631906196b2d465,TypeScript,Undetectable,"EIS:  Correctly import/initialize module.",34.0
