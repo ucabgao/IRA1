@@ -1,0 +1,2 @@
+Project,Issue,Commit,TypeChecker,Detectable,Comment,AnnotationTime
+ng2/auth,8,2783b21e9b7abf15ee7bf7562be64c96bfcc56b2,TypeScript,Unknown,"I can't figure out how to make typescript not accept false.  Seems like search(foo: Object): any; should do it, but it doesn't.",1398.0
