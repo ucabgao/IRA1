@@ -1,0 +1,2 @@
+Project,Issue,Commit,TypeChecker,Detectable,Comment,AnnotationTime
+smo-key/trello2latex,21,cdcf777465874a7c68db5baf8e86d4fb2380c4a8,TypeScript,Undetectable,"Other:  limitation of TS, lack on notnull annotation.  TypeScript, out of the box, errors on card.name.  It complains that it doesn't exist on {}, not that it could be null, which is what the fix checks.  Here, the fact that TypeScript does not allow a developer to specify that a type is non-nullable prevents it from detecting the actual bug.",126.0

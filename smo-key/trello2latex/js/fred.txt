@@ -1,0 +1,84 @@
+t2lcompiler.ts(1,12): error TS2304: Cannot find name 'require'.
+t2lcompiler.ts(2,13): error TS2304: Cannot find name 'require'.
+t2lcompiler.ts(3,10): error TS2304: Cannot find name 'require'.
+t2lcompiler.ts(4,12): error TS2304: Cannot find name 'require'.
+t2lcompiler.ts(5,10): error TS2304: Cannot find name 'require'.
+t2lcompiler.ts(6,16): error TS2304: Cannot find name 'require'.
+t2lcompiler.ts(7,13): error TS2304: Cannot find name 'require'.
+t2lcompiler.ts(8,9): error TS2304: Cannot find name 'require'.
+t2lcompiler.ts(60,1): error TS2304: Cannot find name 'exports'.
+t2lcompiler.ts(71,1): error TS2304: Cannot find name 'exports'.
+t2lcompiler.ts(85,1): error TS2304: Cannot find name 'exports'.
+t2lcompiler.ts(94,1): error TS2304: Cannot find name 'exports'.
+t2lcompiler.ts(106,13): error TS2339: Property 'avatar' does not exist on type '{}'.
+t2lcompiler.ts(108,13): error TS2339: Property 'name' does not exist on type '{}'.
+t2lcompiler.ts(110,13): error TS2339: Property 'initials' does not exist on type '{}'.
+t2lcompiler.ts(111,13): error TS2339: Property 'url' does not exist on type '{}'.
+t2lcompiler.ts(112,13): error TS2339: Property 'username' does not exist on type '{}'.
+t2lcompiler.ts(119,11): error TS2339: Property 'name' does not exist on type '{}'.
+t2lcompiler.ts(121,11): error TS2339: Property 'initials' does not exist on type '{}'.
+t2lcompiler.ts(122,11): error TS2339: Property 'avatar' does not exist on type '{}'.
+t2lcompiler.ts(123,11): error TS2339: Property 'url' does not exist on type '{}'.
+t2lcompiler.ts(124,11): error TS2339: Property 'username' does not exist on type '{}'.
+t2lcompiler.ts(132,1): error TS2304: Cannot find name 'exports'.
+t2lcompiler.ts(150,14): error TS2339: Property 'cards' does not exist on type '{}'.
+t2lcompiler.ts(151,14): error TS2339: Property 'name' does not exist on type '{}'.
+t2lcompiler.ts(152,14): error TS2339: Property 'pos' does not exist on type '{}'.
+t2lcompiler.ts(153,14): error TS2339: Property 'autoselect' does not exist on type '{}'.
+t2lcompiler.ts(156,21): error TS2339: Property 'name' does not exist on type '{}'.
+t2lcompiler.ts(165,22): error TS2339: Property 'cards' does not exist on type '{}'.
+t2lcompiler.ts(231,12): error TS2339: Property 'cards' does not exist on type '{}'.
+t2lcompiler.ts(232,12): error TS2339: Property 'name' does not exist on type '{}'.
+t2lcompiler.ts(233,12): error TS2339: Property 'autoselect' does not exist on type '{}'.
+t2lcompiler.ts(234,12): error TS2339: Property 'pos' does not exist on type '{}'.
+t2lcompiler.ts(243,20): error TS2339: Property 'cards' does not exist on type '{}'.
+t2lcompiler.ts(264,1): error TS2304: Cannot find name 'exports'.
+t2lcompiler.ts(271,1): error TS2304: Cannot find name 'exports'.
+t2lcompiler.ts(296,1): error TS2304: Cannot find name 'exports'.
+t2lcompiler.ts(303,1): error TS2304: Cannot find name 'exports'.
+t2lcompiler.ts(330,1): error TS2304: Cannot find name 'exports'.
+t2lcompiler.ts(353,39): error TS2304: Cannot find name '__dirname'.
+t2lcompiler.ts(377,1): error TS2304: Cannot find name 'exports'.
+t2lcompiler.ts(385,1): error TS2304: Cannot find name 'exports'.
+t2lcompiler.ts(398,1): error TS2304: Cannot find name 'exports'.
+t2lcompiler.ts(430,10): error TS2339: Property 'name' does not exist on type '{}'.
+t2lcompiler.ts(431,23): error TS2339: Property 'name' does not exist on type '{}'.
+t2lcompiler.ts(431,29): error TS2339: Property 'startsWith' does not exist on type 'string'.
+t2lcompiler.ts(433,20): error TS2339: Property 'desc' does not exist on type 'Card'.
+t2lcompiler.ts(435,14): error TS2339: Property 'desc' does not exist on type '{}'.
+t2lcompiler.ts(436,14): error TS2339: Property 'lastmodified' does not exist on type '{}'.
+t2lcompiler.ts(436,32): error TS2339: Property 'dateLastActivity' does not exist on type 'Card'.
+t2lcompiler.ts(437,14): error TS2339: Property 'due' does not exist on type '{}'.
+t2lcompiler.ts(437,40): error TS2339: Property 'due' does not exist on type 'Card'.
+t2lcompiler.ts(438,14): error TS2339: Property 'pos' does not exist on type '{}'.
+t2lcompiler.ts(438,23): error TS2339: Property 'pos' does not exist on type 'Card'.
+t2lcompiler.ts(439,14): error TS2339: Property 'url' does not exist on type '{}'.
+t2lcompiler.ts(439,23): error TS2339: Property 'url' does not exist on type 'Card'.
+t2lcompiler.ts(444,14): error TS2339: Property 'attachments' does not exist on type '{}'.
+t2lcompiler.ts(445,14): error TS2339: Property 'attachmentcover' does not exist on type '{}'.
+t2lcompiler.ts(511,68): error TS2339: Property 'sortByProp' does not exist on type 'any[]'.
+t2lcompiler.ts(578,12): error TS2339: Property 'iscomment' does not exist on type '{}'.
+t2lcompiler.ts(579,12): error TS2339: Property 'isattachment' does not exist on type '{}'.
+t2lcompiler.ts(580,12): error TS2339: Property 'isdeleteattachment' does not exist on type '{}'.
+t2lcompiler.ts(581,17): error TS2339: Property 'isdeleteattachment' does not exist on type '{}'.
+t2lcompiler.ts(581,46): error TS2339: Property 'isattachment' does not exist on type '{}'.
+t2lcompiler.ts(587,21): error TS2339: Property 'isdeleteattachment' does not exist on type '{}'.
+t2lcompiler.ts(596,18): error TS2339: Property 'isattachment' does not exist on type '{}'.
+t2lcompiler.ts(602,20): error TS2339: Property 'attachment' does not exist on type '{}'.
+t2lcompiler.ts(609,18): error TS2339: Property 'date' does not exist on type '{}'.
+t2lcompiler.ts(610,18): error TS2339: Property 'author' does not exist on type '{}'.
+t2lcompiler.ts(611,18): error TS2339: Property 'author' does not exist on type '{}'.
+t2lcompiler.ts(612,18): error TS2339: Property 'author' does not exist on type '{}'.
+t2lcompiler.ts(613,18): error TS2339: Property 'author' does not exist on type '{}'.
+t2lcompiler.ts(614,18): error TS2339: Property 'author' does not exist on type '{}'.
+t2lcompiler.ts(615,18): error TS2339: Property 'author' does not exist on type '{}'.
+t2lcompiler.ts(616,18): error TS2339: Property 'author' does not exist on type '{}'.
+t2lcompiler.ts(625,18): error TS2339: Property 'text' does not exist on type '{}'.
+t2lcompiler.ts(626,18): error TS2339: Property 'date' does not exist on type '{}'.
+t2lcompiler.ts(627,18): error TS2339: Property 'author' does not exist on type '{}'.
+t2lcompiler.ts(628,18): error TS2339: Property 'author' does not exist on type '{}'.
+t2lcompiler.ts(629,18): error TS2339: Property 'author' does not exist on type '{}'.
+t2lcompiler.ts(630,18): error TS2339: Property 'author' does not exist on type '{}'.
+t2lcompiler.ts(631,18): error TS2339: Property 'author' does not exist on type '{}'.
+t2lcompiler.ts(632,18): error TS2339: Property 'author' does not exist on type '{}'.
+t2lcompiler.ts(633,18): error TS2339: Property 'author' does not exist on type '{}'.
