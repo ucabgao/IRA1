@@ -1,0 +1,2 @@
+Project,Issue,Commit,TypeChecker,Detectable,Comment,AnnotationTime
+istvan-ujjmeszaros/bootstrap-touchspin,5,1feb12270a53444672f6263c142989ff1fbf9cb3,TypeScript,Unanalysed,"missing predicate",0.0
