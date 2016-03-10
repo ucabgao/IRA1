@@ -1,0 +1,52 @@
+template.js:12
+ 12:     mustache = require('mustache-ref'),
+                    ^^^^^^^^^^^^^^^^^^^^^^^ mustache-ref. Required module not found
+
+template.js:13
+ 13:     rget = require('rget'),
+                ^^^^^^^^^^^^^^^ rget. Required module not found
+
+template.js:14
+ 14:     async = require('utile').async;
+                 ^^^^^^^^^^^^^^^^ utile. Required module not found
+
+template.js:53
+ 53: var verify = exports.verify = function (tokens, data) {
+                                                     ^^^^ parameter `data`. Missing annotation
+
+template.js:101
+101: var render = exports.render = function render(template, data) {
+                                                             ^^^^ parameter `data`. Missing annotation
+
+template.js:120
+120: exports.file = function (options, callback) {
+                              ^^^^^^^ parameter `options`. Missing annotation
+
+template.js:120
+120: exports.file = function (options, callback) {
+                                       ^^^^^^^^ parameter `callback`. Missing annotation
+
+template.js:135
+135:         data = JSON.stringify(JSON.parse(data, null, 2));
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^^ call of method `parse`
+135:         data = JSON.stringify(JSON.parse(data, null, 2));
+                                                    ^^^^ null. This type is incompatible with
+325:     static parse(text: string, reviver?: (key: any, value: any) => any): any;
+                                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ function type. See: /private/tmp/flow/flowlib_13feedaa/core.js:325
+
+template.js:158
+158: exports.dir = function (options, callback) {
+                             ^^^^^^^ parameter `options`. Missing annotation
+
+template.js:158
+158: exports.dir = function (options, callback) {
+                                      ^^^^^^^^ parameter `callback`. Missing annotation
+
+template.js:168
+168:       return err.code !== 'ENOENT'
+                      ^^^^ property `code`. Property not found in
+168:       return err.code !== 'ENOENT'
+                  ^^^ Error
+
+
+Found 11 errors

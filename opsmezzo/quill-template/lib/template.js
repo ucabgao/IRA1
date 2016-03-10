@@ -1,3 +1,4 @@
+/* @flow */
 /*
  * template.js: Common utility functions for templating files in system.json packages.
  *
