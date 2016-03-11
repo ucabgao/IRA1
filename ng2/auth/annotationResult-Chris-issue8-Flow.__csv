@@ -1,0 +1,2 @@
+Project,Issue,Commit,TypeChecker,Detectable,Comment,AnnotationTime
+ng2/auth,8,2783b21e9b7abf15ee7bf7562be64c96bfcc56b2,Flow,Unknown,"It seems like this should be catchable by a type error, but I can't make flow typecheck this as an error.  Is false allowed when an Object is expected?",402.0

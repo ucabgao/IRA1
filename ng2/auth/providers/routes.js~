@@ -16,7 +16,7 @@
 */
 
 declare class CBLocation {
-	search(foo: string): any;
+	search(foo: Object): any;
 	search(): any;
 	path(foo: string): any;
 	path(): any;
