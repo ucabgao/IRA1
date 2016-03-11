@@ -1,0 +1,2 @@
+Project,Issue,Commit,TypeChecker,Detectable,Comment,AnnotationTime
+nationalparkservice/places-api,9,d8afcd3d18143f1da000912e945305f0747409bd,TypeScript,Unknown,"Clearly, the error is a TypeError, so it seems possible in principle to catch it with TS/Flow, but it is unclear to me where to place the needed annotations and how much restructuring of the code might be entailed.",44.0
