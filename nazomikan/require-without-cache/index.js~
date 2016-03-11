@@ -7,7 +7,7 @@
  */
 
 declare class CBRequire {
-	cache: Array<number>;
+	cache: Array<Object>;
 	resolve(foo: string): any;
 }
 
