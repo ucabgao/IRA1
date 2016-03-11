@@ -1,0 +1,2 @@
+Project,Issue,Commit,TypeChecker,Detectable,Comment,AnnotationTime
+journalisttoolbox/journalisttoolbox-front-end,25,69984a4af5ea4203b5ca7961e279d704afa97ac9,Flow,Undetectable,"refactoring: this just accomplishes about the same thing without the temp variables",99.0
