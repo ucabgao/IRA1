@@ -1,0 +1,2 @@
+Project,Issue,Commit,TypeChecker,Detectable,Comment,AnnotationTime
+djaodjin/djaodjin-annotate,32,671c6bc597b9cd965e1597756d392bc3cb2941f8,Flow,Unknown,"The failure to correctly destroy has created an illegitimate program state that subsequently causes a type error upon trying to access the path property of some unspecified variable.  The bug report does not specify which variable or where.  Thus, I cannot determine where to add type annotations.",233.0
