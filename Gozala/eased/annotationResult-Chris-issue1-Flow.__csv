@@ -1,2 +1,3 @@
 Project,Issue,Commit,TypeChecker,Detectable,Comment,AnnotationTime
 Gozala/eased,1,a45190c68ca851a1266747c099e2cc886028eec5,Flow,Undetectable,"refactoring",25.0
+Gozala/eased,1,a45190c68ca851a1266747c099e2cc886028eec5,Flow,Undetectable,"mistake by using ^ as math.pow, but it still typechecks since both return a number",25.0
