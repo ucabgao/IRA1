@@ -1,0 +1,416 @@
+t2lcompiler.js:3
+  3: var async = require('async');
+                 ^^^^^^^^^^^^^^^^ async. Required module not found
+
+t2lcompiler.js:5
+  5: var rmrf = require("rimraf");
+                ^^^^^^^^^^^^^^^^^ rimraf. Required module not found
+
+t2lcompiler.js:6
+  6: var mu = require('mutex'); //NOTE change name to mu_tex
+              ^^^^^^^^^^^^^^^^ mutex. Required module not found
+
+t2lcompiler.js:71
+ 71: exports.preparefs1 = function(tmp, cb) {
+                                   ^^^ parameter `tmp`. Missing annotation
+
+t2lcompiler.js:71
+ 71: exports.preparefs1 = function(tmp, cb) {
+                                        ^^ parameter `cb`. Missing annotation
+
+t2lcompiler.js:76
+ 76:       fs.mkdir("tmp/", function() { cb(); });
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ call of method `mkdir`
+ 76:       fs.mkdir("tmp/", function() { cb(); });
+                            ^^^^^^^^^^^^^^^^^^^^ function. This type is incompatible with
+576:   declare function mkdir(path: string, mode?: number, callback?: (err: ?Error) => void): void;
+                                                   ^^^^^^ number. See: /private/tmp/flow/flowlib_19471ceb/node.js:576
+
+t2lcompiler.js:82
+ 82: exports.preparefs2 = function(tmp, cb) {
+                                   ^^^ parameter `tmp`. Missing annotation
+
+t2lcompiler.js:82
+ 82: exports.preparefs2 = function(tmp, cb) {
+                                        ^^ parameter `cb`. Missing annotation
+
+t2lcompiler.js:87
+ 87:         fs.mkdir(tmp, function() { cb(); });
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ call of method `mkdir`
+ 87:         fs.mkdir(tmp, function() { cb(); });
+                           ^^^^^^^^^^^^^^^^^^^^ function. This type is incompatible with
+576:   declare function mkdir(path: string, mode?: number, callback?: (err: ?Error) => void): void;
+                                                   ^^^^^^ number. See: /private/tmp/flow/flowlib_19471ceb/node.js:576
+
+t2lcompiler.js:91
+ 91:       fs.mkdir(tmp, function() { cb(); });
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ call of method `mkdir`
+ 91:       fs.mkdir(tmp, function() { cb(); });
+                         ^^^^^^^^^^^^^^^^^^^^ function. This type is incompatible with
+576:   declare function mkdir(path: string, mode?: number, callback?: (err: ?Error) => void): void;
+                                                   ^^^^^^ number. See: /private/tmp/flow/flowlib_19471ceb/node.js:576
+
+t2lcompiler.js:96
+ 96: exports.preparefs3 = function(tmp, board, b, cb) {
+                                   ^^^ parameter `tmp`. Missing annotation
+
+t2lcompiler.js:96
+ 96: exports.preparefs3 = function(tmp, board, b, cb) {
+                                               ^ parameter `b`. Missing annotation
+
+t2lcompiler.js:96
+ 96: exports.preparefs3 = function(tmp, board, b, cb) {
+                                                  ^^ parameter `cb`. Missing annotation
+
+t2lcompiler.js:97
+ 97:   fs.mkdir(tmp + "img", function() {
+       ^ call of method `mkdir`
+ 97:   fs.mkdir(tmp + "img", function() {
+                             ^ function. This type is incompatible with
+576:   declare function mkdir(path: string, mode?: number, callback?: (err: ?Error) => void): void;
+                                                   ^^^^^^ number. See: /private/tmp/flow/flowlib_19471ceb/node.js:576
+
+t2lcompiler.js:98
+ 98:     fs.mkdir(tmp + "dl", function() {
+         ^ call of method `mkdir`
+ 98:     fs.mkdir(tmp + "dl", function() {
+                              ^ function. This type is incompatible with
+576:   declare function mkdir(path: string, mode?: number, callback?: (err: ?Error) => void): void;
+                                                   ^^^^^^ number. See: /private/tmp/flow/flowlib_19471ceb/node.js:576
+
+t2lcompiler.js:105
+105: exports.getmembers = function(tmp, board, b, raw, cb) {
+                                   ^^^ parameter `tmp`. Missing annotation
+
+t2lcompiler.js:105
+105: exports.getmembers = function(tmp, board, b, raw, cb) {
+                                        ^^^^^ parameter `board`. Missing annotation
+
+t2lcompiler.js:105
+105: exports.getmembers = function(tmp, board, b, raw, cb) {
+                                               ^ parameter `b`. Missing annotation
+
+t2lcompiler.js:105
+105: exports.getmembers = function(tmp, board, b, raw, cb) {
+                                                  ^^^ parameter `raw`. Missing annotation
+
+t2lcompiler.js:105
+105: exports.getmembers = function(tmp, board, b, raw, cb) {
+                                                       ^^ parameter `cb`. Missing annotation
+
+t2lcompiler.js:143
+143: exports.getlists = function(tmp, board, b, odata, u, raw, isselect, cardlist, listcallback) {
+                                 ^^^ parameter `tmp`. Missing annotation
+
+t2lcompiler.js:143
+143: exports.getlists = function(tmp, board, b, odata, u, raw, isselect, cardlist, listcallback) {
+                                             ^ parameter `b`. Missing annotation
+
+t2lcompiler.js:143
+143: exports.getlists = function(tmp, board, b, odata, u, raw, isselect, cardlist, listcallback) {
+                                                ^^^^^ parameter `odata`. Missing annotation
+
+t2lcompiler.js:143
+143: exports.getlists = function(tmp, board, b, odata, u, raw, isselect, cardlist, listcallback) {
+                                                       ^ parameter `u`. Missing annotation
+
+t2lcompiler.js:143
+143: exports.getlists = function(tmp, board, b, odata, u, raw, isselect, cardlist, listcallback) {
+                                                          ^^^ parameter `raw`. Missing annotation
+
+t2lcompiler.js:143
+143: exports.getlists = function(tmp, board, b, odata, u, raw, isselect, cardlist, listcallback) {
+                                                               ^^^^^^^^ parameter `isselect`. Missing annotation
+
+t2lcompiler.js:143
+143: exports.getlists = function(tmp, board, b, odata, u, raw, isselect, cardlist, listcallback) {
+                                                                         ^^^^^^^^ parameter `cardlist`. Missing annotation
+
+t2lcompiler.js:143
+143: exports.getlists = function(tmp, board, b, odata, u, raw, isselect, cardlist, listcallback) {
+                                                                                   ^^^^^^^^^^^^ parameter `listcallback`. Missing annotation
+
+t2lcompiler.js:202
+202:                     util.mark("#" + name + "\n" + desc, tmp, function(latex)
+                                         ^^^^ null. This type is incompatible with
+202:                     util.mark("#" + name + "\n" + desc, tmp, function(latex)
+                                   ^^^^^^^^^^ string
+
+t2lcompiler.js:202
+202:                     util.mark("#" + name + "\n" + desc, tmp, function(latex)
+                                         ^^^^ undefined. This type is incompatible with
+202:                     util.mark("#" + name + "\n" + desc, tmp, function(latex)
+                                   ^^^^^^^^^^ string
+
+t2lcompiler.js:275
+275: exports.sortlists = function(b, cb) {
+                                  ^ parameter `b`. Missing annotation
+
+t2lcompiler.js:275
+275: exports.sortlists = function(b, cb) {
+                                     ^^ parameter `cb`. Missing annotation
+
+t2lcompiler.js:282
+282: exports.getotherdata = function(tmp, b, raw, board, cb) {
+                                     ^^^ parameter `tmp`. Missing annotation
+
+t2lcompiler.js:282
+282: exports.getotherdata = function(tmp, b, raw, board, cb) {
+                                          ^ parameter `b`. Missing annotation
+
+t2lcompiler.js:282
+282: exports.getotherdata = function(tmp, b, raw, board, cb) {
+                                             ^^^ parameter `raw`. Missing annotation
+
+t2lcompiler.js:282
+282: exports.getotherdata = function(tmp, b, raw, board, cb) {
+                                                  ^^^^^ parameter `board`. Missing annotation
+
+t2lcompiler.js:282
+282: exports.getotherdata = function(tmp, b, raw, board, cb) {
+                                                         ^^ parameter `cb`. Missing annotation
+
+t2lcompiler.js:307
+307: exports.flushprogress = function(b, board, cb) {
+                                      ^ parameter `b`. Missing annotation
+
+t2lcompiler.js:307
+307: exports.flushprogress = function(b, board, cb) {
+                                                ^^ parameter `cb`. Missing annotation
+
+t2lcompiler.js:314
+314: exports.gettemplate = function(tmp, board, b, templatedir, cb) {
+                                    ^^^ parameter `tmp`. Missing annotation
+
+t2lcompiler.js:314
+314: exports.gettemplate = function(tmp, board, b, templatedir, cb) {
+                                                ^ parameter `b`. Missing annotation
+
+t2lcompiler.js:314
+314: exports.gettemplate = function(tmp, board, b, templatedir, cb) {
+                                                   ^^^^^^^^^^^ parameter `templatedir`. Missing annotation
+
+t2lcompiler.js:314
+314: exports.gettemplate = function(tmp, board, b, templatedir, cb) {
+                                                                ^^ parameter `cb`. Missing annotation
+
+t2lcompiler.js:341
+341: exports.muparse = function(b, u, templatedir, tmp, board, cb) {
+                                ^ parameter `b`. Missing annotation
+
+t2lcompiler.js:341
+341: exports.muparse = function(b, u, templatedir, tmp, board, cb) {
+                                   ^ parameter `u`. Missing annotation
+
+t2lcompiler.js:341
+341: exports.muparse = function(b, u, templatedir, tmp, board, cb) {
+                                      ^^^^^^^^^^^ parameter `templatedir`. Missing annotation
+
+t2lcompiler.js:341
+341: exports.muparse = function(b, u, templatedir, tmp, board, cb) {
+                                                   ^^^ parameter `tmp`. Missing annotation
+
+t2lcompiler.js:341
+341: exports.muparse = function(b, u, templatedir, tmp, board, cb) {
+                                                               ^^ parameter `cb`. Missing annotation
+
+t2lcompiler.js:388
+388: exports.compilelatex = function(tmp, board, cb) {
+                                     ^^^ parameter `tmp`. Missing annotation
+
+t2lcompiler.js:388
+388: exports.compilelatex = function(tmp, board, cb) {
+                                                 ^^ parameter `cb`. Missing annotation
+
+t2lcompiler.js:396
+396: exports.archive = function(tmp, board, cb) {
+                                ^^^ parameter `tmp`. Missing annotation
+
+t2lcompiler.js:396
+396: exports.archive = function(tmp, board, cb) {
+                                            ^^ parameter `cb`. Missing annotation
+
+t2lcompiler.js:409
+409: exports.publish = function(tmp, board, cb) {
+                                ^^^ parameter `tmp`. Missing annotation
+
+t2lcompiler.js:409
+409: exports.publish = function(tmp, board, cb) {
+                                     ^^^^^ parameter `board`. Missing annotation
+
+t2lcompiler.js:409
+409: exports.publish = function(tmp, board, cb) {
+                                            ^^ parameter `cb`. Missing annotation
+
+t2lcompiler.js:434
+434:     if (!xxx.foo(card.name).startsWith("!"))
+              ^^^^^^^^^^^^^^^^^^ call of method `foo`
+434:     if (!xxx.foo(card.name).startsWith("!"))
+                      ^^^^^^^^^ null. This type is incompatible with
+ 12:   foo ( ss : string ) : string;
+                  ^^^^^^ string
+
+t2lcompiler.js:434
+434:     if (!xxx.foo(card.name).startsWith("!"))
+              ^^^^^^^^^^^^^^^^^^ call of method `foo`
+434:     if (!xxx.foo(card.name).startsWith("!"))
+                      ^^^^^^^^^ undefined. This type is incompatible with
+ 12:   foo ( ss : string ) : string;
+                  ^^^^^^ string
+
+t2lcompiler.js:436
+436:       util.mark(cr.desc.trim(), tmp, function(mk1)
+                        ^^^^ property `desc`. Property not found in
+436:       util.mark(cr.desc.trim(), tmp, function(mk1)
+                     ^^ Card
+
+t2lcompiler.js:439
+439:         card.lastmodified = cr.dateLastActivity;
+                                    ^^^^^^^^^^^^^^^^ property `dateLastActivity`. Property not found in
+439:         card.lastmodified = cr.dateLastActivity;
+                                 ^^ Card
+
+t2lcompiler.js:440
+440:         card.due = util.converttime(cr.due); //TODO friendly time format
+                                            ^^^ property `due`. Property not found in
+440:         card.due = util.converttime(cr.due); //TODO friendly time format
+                                         ^^ Card
+
+t2lcompiler.js:441
+441:         card.pos = cr.pos;
+                           ^^^ property `pos`. Property not found in
+441:         card.pos = cr.pos;
+                        ^^ Card
+
+t2lcompiler.js:442
+442:         card.url = cr.url;
+                           ^^^ property `url`. Property not found in
+442:         card.url = cr.url;
+                        ^^ Card
+
+t2lcompiler.js:464
+464:        finalcallback(null, j);
+            ^^^^^^^^^^^^^^^^^^^^^^ function call
+199:                     var name = card.name;
+                                         ^^^^ property `name`. Property cannot be accessed on possibly null value
+199:                     var name = card.name;
+                                    ^^^^ null
+
+t2lcompiler.js:464
+464:        finalcallback(null, j);
+            ^^^^^^^^^^^^^^^^^^^^^^ function call
+200:                     var desc = card.desc;
+                                         ^^^^ property `desc`. Property cannot be accessed on possibly null value
+200:                     var desc = card.desc;
+                                    ^^^^ null
+
+t2lcompiler.js:473
+473:   if (!util.isnull(cr.members)) {
+                           ^^^^^^^ property `members`. Property not found in
+473:   if (!util.isnull(cr.members)) {
+                        ^^ Card
+
+t2lcompiler.js:474
+474:     cr.members.forEach(function(m, k) {
+            ^^^^^^^ property `members`. Property not found in
+474:     cr.members.forEach(function(m, k) {
+         ^^ Card
+
+t2lcompiler.js:476
+476:       if (card.members.length == cr.members.length) { cb(card); }
+                                         ^^^^^^^ property `members`. Property not found in
+476:       if (card.members.length == cr.members.length) { cb(card); }
+                                      ^^ Card
+
+t2lcompiler.js:478
+478:     if (cr.members.length == 0) { cb(card); }
+                ^^^^^^^ property `members`. Property not found in
+478:     if (cr.members.length == 0) { cb(card); }
+             ^^ Card
+
+t2lcompiler.js:485
+485:   if (!util.isnull(cr.membersVoted)) {
+                           ^^^^^^^^^^^^ property `membersVoted`. Property not found in
+485:   if (!util.isnull(cr.membersVoted)) {
+                        ^^ Card
+
+t2lcompiler.js:486
+486:   card.votecount = cr.membersVoted.length;
+                           ^^^^^^^^^^^^ property `membersVoted`. Property not found in
+486:   card.votecount = cr.membersVoted.length;
+                        ^^ Card
+
+t2lcompiler.js:488
+488:     cr.membersVoted.forEach(function(m, k) {
+            ^^^^^^^^^^^^ property `membersVoted`. Property not found in
+488:     cr.membersVoted.forEach(function(m, k) {
+         ^^ Card
+
+t2lcompiler.js:490
+490:       if (card.voters.length == cr.membersVoted.length) { cb(card); }
+                                        ^^^^^^^^^^^^ property `membersVoted`. Property not found in
+490:       if (card.voters.length == cr.membersVoted.length) { cb(card); }
+                                     ^^ Card
+
+t2lcompiler.js:492
+492:     if (cr.membersVoted.length == 0) { cb(card); }
+                ^^^^^^^^^^^^ property `membersVoted`. Property not found in
+492:     if (cr.membersVoted.length == 0) { cb(card); }
+             ^^ Card
+
+t2lcompiler.js:500
+500:   async.eachSeries(cr.checklists, function(c, cb1) {
+                           ^^^^^^^^^^ property `checklists`. Property not found in
+500:   async.eachSeries(cr.checklists, function(c, cb1) {
+                        ^^ Card
+
+t2lcompiler.js:514
+514:         card.checklists.push({ name: mk1, pos: c.pos, items: items.sortByProp('pos') });
+                                                                        ^^^^^^^^^^ property `sortByProp`. Property not found in
+514:         card.checklists.push({ name: mk1, pos: c.pos, items: items.sortByProp('pos') });
+                                                                  ^^^^^^^^^^^^^^^^^^^^^^^ Array
+
+t2lcompiler.js:524
+524:   var count = cr.attachments.length;
+                      ^^^^^^^^^^^ property `attachments`. Property not found in
+524:   var count = cr.attachments.length;
+                   ^^ Card
+
+t2lcompiler.js:526
+526:   async.each(cr.attachments, function(attach, cbattach) {
+                     ^^^^^^^^^^^ property `attachments`. Property not found in
+526:   async.each(cr.attachments, function(attach, cbattach) {
+                  ^^ Card
+
+t2lcompiler.js:544
+544:             if (attach.id == cr.idAttachmentCover)
+                                     ^^^^^^^^^^^^^^^^^ property `idAttachmentCover`. Property not found in
+544:             if (attach.id == cr.idAttachmentCover)
+                                  ^^ Card
+
+t2lcompiler.js:565
+565:     console.log(i + " " + j + " ATTACHMENT: DONE GETTING! " + cr.attachments.length + " " + card.attachments.length);
+                                                                      ^^^^^^^^^^^ property `attachments`. Property not found in
+565:     console.log(i + " " + j + " ATTACHMENT: DONE GETTING! " + cr.attachments.length + " " + card.attachments.length);
+                                                                   ^^ Card
+
+t2lcompiler.js:578
+578:   async.eachSeries(cr.actions, function(act, cb1) {
+                           ^^^^^^^ property `actions`. Property not found in
+578:   async.eachSeries(cr.actions, function(act, cb1) {
+                        ^^ Card
+
+t2lcompiler.js:584
+584:     if ((action.isdeleteattachment || action.isattachment) && (act.data.attachment.id == cr.idAttachmentCover))
+                                                                                                 ^^^^^^^^^^^^^^^^^ property `idAttachmentCover`. Property not found in
+584:     if ((action.isdeleteattachment || action.isattachment) && (act.data.attachment.id == cr.idAttachmentCover))
+                                                                                              ^^ Card
+
+t2lcompiler.js:652
+652:   if (!util.isnull(list.cards) && list.cards.length > 0) { list.cards = list.cards.sortByProp('pos'); }
+                                                                                        ^^^^^^^^^^ property `sortByProp`. Property not found in
+652:   if (!util.isnull(list.cards) && list.cards.length > 0) { list.cards = list.cards.sortByProp('pos'); }
+                                                                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^ Array
+
+
+Found 82 errors

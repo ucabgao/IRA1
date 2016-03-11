@@ -1,2 +1,3 @@
 Project,Issue,Commit,TypeChecker,Detectable,Comment,AnnotationTime
 smo-key/trello2latex,21,cdcf777465874a7c68db5baf8e86d4fb2380c4a8,Flow,Unknown,"It seems that this should be detectable, because the fix essentially wraps code in a null check.  The function s, from the strings module, could have been defined not to accept a null string.  No annotations I tried worked.  It may be that my supposition that Flow does not allow type to be null by default is false.",602.0
+smo-key/trello2latex,21,cdcf777465874a7c68db5baf8e86d4fb2380c4a8,Flow,Detectable,"",0.0

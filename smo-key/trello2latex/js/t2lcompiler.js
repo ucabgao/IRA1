@@ -9,13 +9,12 @@ var spawn = require('child_process').spawn;
 var s = require("string");
 
 declare class strstr {
-  foo ( ss : string, nn : number ) : string;
+  foo ( ss : string ) : string;
 }
 var xxx : strstr;
-Declare class Card {
 
-  name: string;
-
+declare class Card {
+  name: ?string;
 }
 
 
@@ -431,7 +430,7 @@ function buildcard(c, board, odata, u, i, j, finalcallback) {
   util.trello("/cards/" + c.id + "?actions=commentCard,addAttachmentToCard,deleteAttachmentFromCard&actions_limit=1000&action_memberCreator_fields=fullName,initials,username,url&attachments=true&membersVoted=true&membersVoted_fields=fullName,initials,username,url&checklists=all&members=true&member_fields=fullName,initials,username,url", board.auth, odata, function(e, cr : Card) {
     //get card
     var card = { };
-    card.name : string = cr.name;
+    card.name = cr.name;
     if (!xxx.foo(card.name).startsWith("!"))
     {
       util.mark(cr.desc.trim(), tmp, function(mk1)
