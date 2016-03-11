@@ -1,0 +1,2 @@
+Project,Issue,Commit,TypeChecker,Detectable,Comment,AnnotationTime
+nazomikan/require-without-cache,1,25d0e58d4d8f53add91f6334f1ad17117d8aadd5,TypeScript,Unknown,"I timed out on the declaration, though this seems exactly what could be caught with a type declaration.",1004.0
