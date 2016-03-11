@@ -1,0 +1,2 @@
+Project,Issue,Commit,TypeChecker,Detectable,Comment,AnnotationTime
+boundlessgeo/GeoExplorer,15,0675c0f759e049ee34f9fce6571731dddeda797e,TypeScript,Undetectable,"Syntax Error",18.0
