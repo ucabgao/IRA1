@@ -1,4 +1,4 @@
-// @flow weak
+// @flow
 /*global $:false, _:false, Morris:false, __report:false, Raphael:false */
 /*jshint browser:true*/
 
