@@ -1,0 +1,2 @@
+Project,Issue,Commit,TypeChecker,Detectable,Comment,AnnotationTime
+Gozala/narwhal-xulrunner,5,b9734c1884ce5f7df8bcc3ea7b2cc15be1a8239a,TypeScript,Unknown,"The reported error is a type error:  a variable that the developer expected would be a function isn't in some case.  That said, I can't see how to annotate or restructure the code so that TypeScript could detect it.  I simply don't follow the code in io-engine.js.",204.0

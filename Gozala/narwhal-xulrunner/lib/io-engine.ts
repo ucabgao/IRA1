@@ -2,9 +2,11 @@ var Pipe = CC("@mozilla.org/pipe;1", "nsIPipe", "init");
 var BinaryOutputStream = CC("@mozilla.org/binaryoutputstream;1", "nsIBinaryOutputStream", "setOutputStream");
 var BinaryInputStream = CC("@mozilla.org/binaryinputstream;1", "nsIBinaryInputStream", "setInputStream");
 var SeekableStream = Ci.nsISeekableStream;
+
 var BINARY = require("./binary-engine");
 var ByteString = require("./binary").ByteString;
-var IO = exports.IO = function (inputStream, outputStream) {
+
+var IO = exports.IO = function(inputStream, outputStream) {
     this.inputStream = inputStream;
     this.outputStream = outputStream;
 };
@@ -17,18 +19,17 @@ IO.prototype = {
     get binaryOutputStream() {
         return this._binaryOutputStream = this._binaryOutputStream || new BinaryOutputStream(this.outputStream);
     },
-    read: function (length) {
+    read: function(length) {
         var readAll = (arguments.length == 0);
-        if (typeof length !== "number")
-            length = 1024;
+        if (typeof length !== "number") length = 1024;
         var bytes = this.binaryInputStream.readByteArray(readAll ? this.binaryInputStream.available() : length);
         return new ByteString(bytes, 0, bytes.length);
     },
-    copy: function (output, mode, options) {
+    copy: function(output, mode, options) {
         output.writeFrom(this.binaryInputStream, this.binaryInputStream.available());
         return this;
     },
-    write: function (object, charset) {
+    write: function(object, charset) {
         if (object === null || object === undefined || typeof object.toByteString !== "function")
             throw new Error("Argument to IO.write must have toByteString() method");
         var binary = object.toByteString(charset);
@@ -38,34 +39,27 @@ IO.prototype = {
         this.binaryOutputStream.writeByteArray(bytes.slice(offset, offset + bytes.length), length);
         return this;
     },
-    flush: function () {
+    flush: function() {
         this.binaryOutputStream.flush();
         return this;
     },
-    close: function () {
-        if (this._binaryInputStream)
-            this._binaryInputStream.close();
-        if (this.inputStream)
-            this.inputStream.close();
-        if (this._binarOutputStream)
-            this._binaryOutputStream.close();
-        if (this.outputStream)
-            this.outputStream.close();
+    close: function() {
+        if (this._binaryInputStream) this._binaryInputStream.close();
+        if (this.inputStream) this.inputStream.close();
+        if (this._binarOutputStream) this._binaryOutputStream.close();
+        if (this.outputStream) this.outputStream.close();
     },
-    isatty: function () {
+    isatty: function() {
         return false;
     },
     _seekable: false,
-    _ensureSeekable: function () {
-        if (this._seekable)
-            return;
-        if (this.inputStream)
-            this.inputStream.QueryInterface(SeekableStream);
-        if (this.outputStream)
-            this.outputStream.QueryInterface(SeekableStream);
+    _ensureSeekable: function() {
+        if (this._seekable) return;
+        if (this.inputStream) this.inputStream.QueryInterface(SeekableStream);
+        if (this.outputStream) this.outputStream.QueryInterface(SeekableStream);
         this._seekable = true;
     },
-    seek: function (opaqueCookie) {
+    seek: function(opaqueCookie) {
         this._ensureSeekable();
         if (this.inputStream) {
             var offset = opaqueCookie.inputStream === undefined ? opaqueCookie : opaqueCookie.inputStream;
@@ -79,7 +73,7 @@ IO.prototype = {
         }
         return this;
     },
-    tell: function () {
+    tell: function() {
         this._ensureSeekable();
         return {
             inputStream: this.inputStream ? this.inputStream.tell() : null,
@@ -87,121 +81,144 @@ IO.prototype = {
         };
     }
 };
-exports.TextInputStream = function (raw, lineBuffering, buffering, charset, options) {
+
+
+
+exports.TextInputStream = function(raw, lineBuffering, buffering, charset, options) {
     var stream = Cc["@mozilla.org/intl/converter-input-stream;1"]
-        .createInstance(Ci.nsIConverterInputStream);
-    stream.init(raw.inputStream, charset || null, buffering || 0, 0);
+            .createInstance(Ci.nsIConverterInputStream);
+        stream.init(raw.inputStream, charset || null, buffering || 0, 0);
+
+
     var self = this;
-    self.readLine = function () {
+    self.readLine = function() {
         stream.QueryInterface(Ci.nsIUnicharLineInputStream);
         var line = {};
         var eof = stream.readLine(line);
-        if (eof || line.value)
-            return line.value + "\n";
+        if (eof || line.value) return line.value + "\n";
         return "";
     };
+
     self.itertor = function () {
         return self;
     };
+
     self.next = function () {
         stream.QueryInterface(Ci.nsIUnicharLineInputStream);
         var line = {};
         var eof = stream.readLine(line);
-        if (eof || line.value)
-            return line.value;
+        if (eof || line.value) return line.value;
         throw StopIteration;
     };
+
     self.iterator = function () {
         return self;
     };
+
     self.forEach = function (block, context) {
         var line;
         while (true) {
             try {
                 line = self.next();
-            }
-            catch (exception) {
+            } catch (exception) {
                 break;
             }
             block.call(context, line);
         }
     };
-    self.input = function () {
+
+    self.input = function() {
         throw "NYI";
     };
-    self.readLines = function () {
+
+    self.readLines = function() {
         stream.QueryInterface(Ci.nsIUnicharLineInputStream);
-        var line = {}, lines = [], haveMore;
+        var line = {},
+            lines = [],
+            haveMore;
         do {
-            haveMore = stream.readLine(line);
-            lines.push(line.value + "\n");
-        } while (haveMore);
+          haveMore = stream.readLine(line);
+          lines.push(line.value + "\n");
+        } while(haveMore);
         return lines;
     };
-    self.read = function () {
+
+    self.read = function() {
         stream.QueryInterface(Ci.nsIConverterInputStream);
         var data = {}, value = "";
-        while (stream.readString(4096, data) != 0)
-            value += data.value;
+        while (stream.readString(4096, data) != 0) value += data.value;
         return value;
     };
-    self.readInto = function (buffer) {
+
+    self.readInto = function(buffer) {
         throw "NYI";
     };
-    self.close = function () {
+
+    self.close = function() {
         stream.close();
     };
 };
-exports.TextOutputStream = function (raw, lineBuffering, buffering, charset, options) {
+
+exports.TextOutputStream = function(raw, lineBuffering, buffering, charset, options) {
     var stream = Cc["@mozilla.org/intl/converter-output-stream;1"]
         .createInstance(Ci.nsIConverterOutputStream);
     stream.init(raw.outputStream, charset || null, buffering || 0, 0);
+
     var self = this;
+
     self.raw = raw;
-    self.write = function () {
+
+    self.write = function() {
         stream.writeString.apply(stream, arguments);
         return self;
     };
-    self.writeLine = function (line) {
+
+    self.writeLine = function(line) {
         self.write(line + "\n"); // todo recordSeparator
         return self;
     };
-    self.writeLines = function (lines) {
+
+    self.writeLines = function(lines) {
         lines.forEach(self.writeLine);
         return self;
     };
-    self.print = function () {
+
+    self.print = function() {
         self.write(Array.prototype.join.call(arguments, " ") + "\n");
         self.flush();
         // todo recordSeparator, fieldSeparator
         return self;
     };
-    self.flush = function () {
+
+    self.flush = function() {
         stream.flush();
         return self;
     };
-    self.close = function () {
+
+    self.close = function() {
         stream.close();
         return self;
     };
+
 };
-exports.TextIOWrapper = function (raw, mode, lineBuffering, buffering, charset, options) {
+
+exports.TextIOWrapper = function(raw, mode, lineBuffering, buffering, charset, options) {
     if (mode.update) {
         return new exports.TextIOStream(raw, lineBuffering, buffering, charset, options);
-    }
-    else if (mode.write || mode.append) {
+    } else if (mode.write || mode.append) {
         return new exports.TextOutputStream(raw, lineBuffering, buffering, charset, options);
-    }
-    else if (mode.read) {
+    } else if (mode.read) {
         return new exports.TextInputStream(raw, lineBuffering, buffering, charset, options);
-    }
-    else {
+    } else {
         throw new Error("file must be opened for read, write, or append mode.");
     }
 };
+
 /* ByteIO */
+
 // FIXME: this doesn't read/write the same stream
-var ByteIO = exports.ByteIO = function (binary) {
+
+var ByteIO = exports.ByteIO = function(binary) {
     //var stream = new StorageStream(1024, -1, null);
     var pipe = new Pipe(false, false, 0, 0, null);
     this.outputStream = pipe.outputStream;
@@ -212,32 +229,39 @@ var ByteIO = exports.ByteIO = function (binary) {
         this.flush();
     }
 };
+
 ByteIO.prototype = new exports.IO();
-ByteIO.prototype.toByteString = function () {
+
+ByteIO.prototype.toByteString = function() {
     var bytes = this.binaryInputStream.readByteArray(this.binaryInputStream.available());
     return new ByteString(bytes, 0, bytes.length);
-};
-ByteIO.prototype.decodeToString = function (charset) {
+}
+
+ByteIO.prototype.decodeToString = function(charset) {
     var bytes = new this.binaryInputStream.readByteArray(this.binaryInputStream.available());
     var decode = charset ? BINARY.B_DECODE : BINARY.B_DECODE_DEFAULT;
-    return decode(bytes, 0, bytes.length, charset);
-};
-var StringIO = exports.StringIO = function (initial) {
+    return decode(bytes, 0, bytes.length, charset)
+}
+
+
+var StringIO = exports.StringIO = function(initial) {
     var buffer = [];
     if (initial) {
         buffer = buffer.concat(initial.join(""));
     }
+
     function length() {
         return buffer.length;
     }
+
     function read(length) {
         var result;
+
         if (arguments.length == 0) {
             result = buffer.join("");
             buffer = [];
             return result;
-        }
-        else {
+        } else {
             if (!length || length < 1)
                 length = 1024;
             length = Math.min(buffer.length, length);
@@ -246,27 +270,27 @@ var StringIO = exports.StringIO = function (initial) {
             return result;
         }
     }
+
     function write(text) {
         buffer = buffer.concat(text.split(""));
         return self;
     }
+
     function copy(output) {
         output.write(read()).flush();
         return self;
     }
+
     function next() {
         var pos, result;
-        if (buffer.length === 0) {
-            throw StopIteration;
-        }
+        if (buffer.length === 0) { throw StopIteration; }
         pos = buffer.indexOf("\n");
-        if (pos === -1) {
-            pos = buffer.length;
-        }
+        if (pos === -1) { pos = buffer.length; }
         result = read(pos);
         read(1);
         return result;
     }
+
     var self = {
         get length() {
             return length();
@@ -274,53 +298,51 @@ var StringIO = exports.StringIO = function (initial) {
         read: read,
         write: write,
         copy: copy,
-        close: function () {
+        close: function() {
             return self;
         },
-        flush: function () {
+        flush: function() {
             return self;
         },
-        iterator: function () {
+        iterator: function() {
             return self;
         },
-        forEach: function (block) {
+        forEach: function(block) {
             while (true) {
                 try {
                     block.call(this, next());
-                }
-                catch (exception) {
+                } catch (exception) {
                     if (exception instanceof StopIteration)
                         break;
                     throw exception;
                 }
             }
         },
-        readLine: function () {
+        readLine: function() {
             var pos = buffer.indexOf("\n");
-            if (pos === -1) {
-                pos = buffer.length;
-            }
+            if (pos === -1) { pos = buffer.length; }
             return read(pos + 1);
         },
         next: next,
-        print: function (line) {
+        print: function(line) {
             return write(line + "\n").flush();
         },
-        toString: function () {
+        toString: function() {
             return buffer.join("");
         },
-        substring: function () {
+        substring: function() {
             var string = buffer.join("");
             return string.substring.apply(string, arguments);
         },
-        slice: function () {
+        slice: function() {
             var string = buffer.join("");
             return string.slice.apply(string, arguments);
         },
-        substr: function () {
+        substr: function() {
             var string = buffer.join("");
             return string.substr.apply(string, arguments);
         }
     };
     return self;
 };
+
