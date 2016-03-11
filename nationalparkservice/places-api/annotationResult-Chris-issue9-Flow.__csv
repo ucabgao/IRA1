@@ -1,0 +1,2 @@
+Project,Issue,Commit,TypeChecker,Detectable,Comment,AnnotationTime
+nationalparkservice/places-api,9,d8afcd3d18143f1da000912e945305f0747409bd,Flow,Undetectable,"Other: this is just updating the function return types.  I can't see that it was a type error before.",379.0
