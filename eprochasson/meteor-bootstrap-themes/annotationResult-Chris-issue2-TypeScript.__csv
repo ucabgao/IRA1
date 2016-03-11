@@ -1,0 +1,2 @@
+Project,Issue,Commit,TypeChecker,Detectable,Comment,AnnotationTime
+eprochasson/meteor-bootstrap-themes,2,0403058f2354c913d22b68f12db3c7bb7724c28d,TypeScript,Undetectable,"other: simply changes the dependency on bootstrap.  This is kind of like a refactoring.",113.0
