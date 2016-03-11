@@ -1,0 +1,70 @@
+plato-overview.js:15
+ 15: $(function(){
+     ^ identifier `$`. Could not resolve name
+
+plato-overview.js:19
+ 19:   var raphael = Raphael;
+                     ^^^^^^^ identifier `Raphael`. Could not resolve name
+
+plato-overview.js:34
+ 34:     var y = parseInt(graphHeight * num * lineHeight,10);
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ function call
+ 34:     var y = parseInt(graphHeight * num * lineHeight,10);
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ number. This type is incompatible with
+ 17: declare function parseInt(string: string, radix?: number): number;
+                                       ^^^^^^ string. See: /private/tmp/flow/flowlib_29f12c20/core.js:17
+
+plato-overview.js:109
+109:       sloc.ymax = Math.max(sloc.ymax, report.complexity.aggregate.complexity.sloc.physical);
+                                                                       ^^^^^^^^^^ property `complexity`. Property not found in
+109:       sloc.ymax = Math.max(sloc.ymax, report.complexity.aggregate.complexity.sloc.physical);
+                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^ String
+
+plato-overview.js:110
+110:       bugs.ymax = Math.max(bugs.ymax, report.complexity.aggregate.complexity.halstead.bugs.toFixed(2));
+                                                                       ^^^^^^^^^^ property `complexity`. Property not found in
+110:       bugs.ymax = Math.max(bugs.ymax, report.complexity.aggregate.complexity.halstead.bugs.toFixed(2));
+                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^ String
+
+plato-overview.js:114
+114:         value : report.complexity.aggregate.complexity.sloc.physical,
+                                                 ^^^^^^^^^^ property `complexity`. Property not found in
+114:         value : report.complexity.aggregate.complexity.sloc.physical,
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^ String
+
+plato-overview.js:118
+118:         value : report.complexity.aggregate.complexity.halstead.bugs.toFixed(2),
+                                                 ^^^^^^^^^^ property `complexity`. Property not found in
+118:         value : report.complexity.aggregate.complexity.halstead.bugs.toFixed(2),
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^ String
+
+plato-overview.js:122
+122:         value : report.complexity.maintainability.toFixed(2),
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ call of method `toFixed`. Method cannot be called on possibly null value
+122:         value : report.complexity.maintainability.toFixed(2),
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ null
+
+plato-overview.js:122
+122:         value : report.complexity.maintainability.toFixed(2),
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ call of method `toFixed`. Method cannot be called on possibly undefined value
+122:         value : report.complexity.maintainability.toFixed(2),
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ undefined
+
+plato-overview.js:128
+128:       document.location = __report.reports[i].info.link;
+                               ^^^^^^^^ identifier `__report`. Could not resolve name
+
+plato-overview.js:132
+132:       Morris.Bar(bugs),
+           ^^^^^^ identifier `Morris`. Could not resolve name
+
+plato-overview.js:143
+143:   drawOverviewCharts(__report.reports);
+                          ^^^^^^^^ identifier `__report`. Could not resolve name
+
+plato-overview.js:146
+146:   $(window).on('resize', _.debounce(function(){
+                              ^ identifier `_`. Could not resolve name
+
+
+Found 13 errors
