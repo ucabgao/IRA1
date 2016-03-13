@@ -1,3 +1,5 @@
+/* @flow */
+
 var fs = require('fs')
   , util = require('util')
   , events = require('events')
