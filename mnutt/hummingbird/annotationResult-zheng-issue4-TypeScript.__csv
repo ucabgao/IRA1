@@ -1,0 +1,2 @@
+Project,Issue,Commit,TypeChecker,Detectable,Comment,AnnotationTime
+mnutt/hummingbird,4,10f3a0c1c7da28c3c695ec4dd74c807aee2a8bb3,TypeScript,Detectable,"configJSON is of type Buffer. Constructs such an annotation by consulting DefinitlyTyped.",570.0
