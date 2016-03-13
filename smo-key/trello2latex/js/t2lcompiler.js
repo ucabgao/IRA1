@@ -1,3 +1,5 @@
+/* @flow */
+
 var util = require("./util.js");
 var async = require('async');
 var fs = require("fs");
@@ -5,7 +7,14 @@ var rmrf = require("rimraf");
 var mu = require('mutex'); //NOTE change name to mu_tex
 var yazl = new require('yazl');
 var spawn = require('child_process').spawn;
-var s = require("string");
+//var s = require("string");
+
+class t {
+name:?string;
+}
+
+function s (string):?string {};
+
 
 /*** FUNCTIONS ***/
 var multiplicand = 75; //start creating pdf at five plus this

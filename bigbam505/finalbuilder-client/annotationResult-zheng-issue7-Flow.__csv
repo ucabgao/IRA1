@@ -1,0 +1,2 @@
+Project,Issue,Commit,TypeChecker,Detectable,Comment,AnnotationTime
+bigbam505/finalbuilder-client,7,2150880c0ac640c3d6378f3f79558f76c2939ff8,Flow,Undetectable,"EIS. Mssing functionality. According to the document on https://www.npmjs.com/package/soap soap.createClient is perfectly fine with passing in only two parameters. Therefore, checking the arity of the function thereby forcing the original code to fail to type check is not allowed.",430.0
