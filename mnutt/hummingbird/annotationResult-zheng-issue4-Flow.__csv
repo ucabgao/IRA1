@@ -1,0 +1,2 @@
+Project,Issue,Commit,TypeChecker,Detectable,Comment,AnnotationTime
+mnutt/hummingbird,4,10f3a0c1c7da28c3c695ec4dd74c807aee2a8bb3,Flow,Detectable,"Flow amazingly detects this bug because it somehow integrates with a declaration file for node.js and identifies this type inconsistency.",35.0
