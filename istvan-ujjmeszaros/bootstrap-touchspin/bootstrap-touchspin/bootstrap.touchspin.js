@@ -1,3 +1,5 @@
+/* @flow */
+
 /*jshint undef: true, unused:true */
 /*global jQuery: true */
 

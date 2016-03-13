@@ -1,0 +1,2 @@
+Project,Issue,Commit,TypeChecker,Detectable,Comment,AnnotationTime
+istvan-ujjmeszaros/bootstrap-touchspin,5,1feb12270a53444672f6263c142989ff1fbf9cb3,Flow,Undetectable,"Missing a predicate. NaN is still of type 'number'. To be able to detect this bug, type systems need to support more fine-grained types, such as a type for NaN.",132.0
