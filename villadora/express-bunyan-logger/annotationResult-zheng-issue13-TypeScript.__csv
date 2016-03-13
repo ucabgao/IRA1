@@ -1,0 +1,2 @@
+Project,Issue,Commit,TypeChecker,Detectable,Comment,AnnotationTime
+villadora/express-bunyan-logger,13,8d3f6029add113da5003a268e87a1cab05fe03b8,TypeScript,Undetectable,"Parsing error. ",51.0
