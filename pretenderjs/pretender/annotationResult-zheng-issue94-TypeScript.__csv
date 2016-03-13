@@ -1,0 +1,2 @@
+Project,Issue,Commit,TypeChecker,Detectable,Comment,AnnotationTime
+pretenderjs/pretender,94,7df020470e4d0b31855b96e14eea49ab37b97f79,TypeScript,Undetectable,"String errors. Wrongly install some packages specified by string literals which are invisible to these two type systems.",83.0
