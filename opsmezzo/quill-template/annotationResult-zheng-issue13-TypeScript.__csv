@@ -1,0 +1,2 @@
+Project,Issue,Commit,TypeChecker,Detectable,Comment,AnnotationTime
+opsmezzo/quill-template,13,3342f999fcf48fece0b45bddd0e63d0cfe18446e,TypeScript,Undetectable,"EIS. JSON.stringify() can take up to three parameters, two of which are optional. Therefore, both the buggy and fix version are valid in terms of type checking. Checking the arity of the function is not an option.",140.0
