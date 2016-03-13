@@ -1,0 +1,2 @@
+Project,Issue,Commit,TypeChecker,Detectable,Comment,AnnotationTime
+royriojas/persistify,2,5ff8fdf6dded64e8ee1fa2909448d1c6c35b1bda,Flow,Undetectable,"Missing a predicate. Forgot to exit with code 1 when an error occurs.",25.0
