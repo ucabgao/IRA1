@@ -1,0 +1,2 @@
+Project,Issue,Commit,TypeChecker,Detectable,Comment,AnnotationTime
+hillar/pigsty-moloch-plugin,3,4a67b3125ea53faa135a09eadd6f16bec310ad4c,TypeScript,Undetectable,"Parsing error. However, this bug is revealed by a runtime type error when using the plugin. NEEDS Attention.",143.0
