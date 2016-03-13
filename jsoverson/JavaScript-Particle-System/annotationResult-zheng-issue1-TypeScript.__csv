@@ -1,0 +1,2 @@
+Project,Issue,Commit,TypeChecker,Detectable,Comment,AnnotationTime
+jsoverson/JavaScript-Particle-System,1,4768bff8838c086ecaa1513520f4b9a8c5bf9d3a,TypeScript,Undetectable,"String errors. Value 'darker' is no longer supported in Chrome and therefore should not be assigned to globalCompositeOperation property. However, these values are not visible to type systems in this experiment.",429.0
