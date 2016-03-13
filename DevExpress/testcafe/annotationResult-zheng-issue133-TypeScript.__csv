@@ -1,0 +1,2 @@
+Project,Issue,Commit,TypeChecker,Detectable,Comment,AnnotationTime
+DevExpress/testcafe,133,88b3f610e2bf4b954c456fa39f65b9bc146906ba,TypeScript,Undetectable,"EIS. Wrong implementation of triggering an event on clicking.",43.0
