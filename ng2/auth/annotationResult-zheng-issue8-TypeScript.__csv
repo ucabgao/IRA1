@@ -1,0 +1,2 @@
+Project,Issue,Commit,TypeChecker,Detectable,Comment,AnnotationTime
+ng2/auth,8,2783b21e9b7abf15ee7bf7562be64c96bfcc56b2,TypeScript,Unknown,"Do not know how to make TypeScript not accept boolean. And DefinitelyTyped is too permissive here, because when there is only one parameter for search(), DefinitelyTyped annotate it as 'any'. In fact, it should be string | Object.",883.0
