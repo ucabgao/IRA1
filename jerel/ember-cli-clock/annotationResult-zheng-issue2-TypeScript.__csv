@@ -1,0 +1,2 @@
+Project,Issue,Commit,TypeChecker,Detectable,Comment,AnnotationTime
+jerel/ember-cli-clock,2,276e47b68262b0430e329f46063fa91fb633c5aa,TypeScript,Undetectable,"API change. Both Object and Service still exist on the object Ember. Therefore, type systems cannot detect whether they should allow this access.",582.0
