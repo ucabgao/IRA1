@@ -1,3 +1,10 @@
+/* @flow */
+
+class l {
+search(x?: string | Object, y?: string|number|Array<string>|boolean): any {};
+path(x?:string) : any {};
+}
+
 /**
 * @ngdoc service
 * @name ng2Auth.providers:routesProvider
@@ -11,6 +18,8 @@
 * @description
 * Service consumption docs.
 */
+
+var angular:any;
 
 angular
 .module('ng2Auth')
@@ -46,7 +55,7 @@ angular
       return {
 
         $get: ['$rootScope', '$location', '$route', '$injector',
-        function ($rootScope, $location, $route, $injector) {
+        function ($rootScope, $location:l, $route, $injector) {
 
 
           if(!userService) {
