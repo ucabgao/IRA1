@@ -1,11 +1,17 @@
+/* @flow */
+
 var util = require("./util.js");
 var async = require('async');
 var fs = require("fs");
+
 var rmrf = require("rimraf");
 var mu = require('mutex'); //NOTE change name to mu_tex
 var yazl = new require('yazl');
 var spawn = require('child_process').spawn;
-var s = require("string");
+//var s:S = require("string");
+function s (x:any) : ?string {};
+
+
 
 /*** FUNCTIONS ***/
 var multiplicand = 75; //start creating pdf at five plus this
@@ -409,6 +415,9 @@ exports.publish = function(tmp, board, cb) {
   });
 }
 
+class t {
+ name: ?Object;
+}
 
 /*** CARD COMPILER ***/
 
@@ -416,7 +425,7 @@ function buildcard(c, board, odata, u, i, j, finalcallback) {
   //TODO allow template to set the action limit
   var tmp = "tmp/" + board.id + "/";
 
-  util.trello("/cards/" + c.id + "?actions=commentCard,addAttachmentToCard,deleteAttachmentFromCard&actions_limit=1000&action_memberCreator_fields=fullName,initials,username,url&attachments=true&membersVoted=true&membersVoted_fields=fullName,initials,username,url&checklists=all&members=true&member_fields=fullName,initials,username,url", board.auth, odata, function(e, cr) {
+  util.trello("/cards/" + c.id + "?actions=commentCard,addAttachmentToCard,deleteAttachmentFromCard&actions_limit=1000&action_memberCreator_fields=fullName,initials,username,url&attachments=true&membersVoted=true&membersVoted_fields=fullName,initials,username,url&checklists=all&members=true&member_fields=fullName,initials,username,url", board.auth, odata, function(e, cr:t) {
     //get card
     var card = { };
     card.name = cr.name;
