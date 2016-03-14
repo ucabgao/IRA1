@@ -1,0 +1,2 @@
+Project,Issue,Commit,TypeChecker,Detectable,Comment,AnnotationTime
+journalisttoolbox/journalisttoolbox-front-end,25,69984a4af5ea4203b5ca7961e279d704afa97ac9,TypeScript,Undetectable,"EIS/Missing a predicate. The fix changes the scopes of some variable. Missing a predicate causes some unexpected elements show up.",40.0
