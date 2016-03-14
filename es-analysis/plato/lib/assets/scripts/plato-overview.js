@@ -1,5 +1,15 @@
+/* @flow */
+
 /*global $:false, _:false, Morris:false, __report:false, Raphael:false */
 /*jshint browser:true*/
+
+class t {
+    complexity : s;
+}
+
+class s {
+maintainability: ?number;
+}
 
 $(function(){
   "use strict";
@@ -93,7 +103,7 @@ $(function(){
       barColors : ['#D54C2C']
     };
 
-    reports.forEach(function(report){
+    reports.forEach(function(report:t){
 
       sloc.ymax = Math.max(sloc.ymax, report.complexity.aggregate.complexity.sloc.physical);
       bugs.ymax = Math.max(bugs.ymax, report.complexity.aggregate.complexity.halstead.bugs.toFixed(2));
