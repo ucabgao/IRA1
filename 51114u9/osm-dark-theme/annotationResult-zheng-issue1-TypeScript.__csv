@@ -1,0 +1,2 @@
+Project,Issue,Commit,TypeChecker,Detectable,Comment,AnnotationTime
+51114u9/osm-dark-theme,1,46e7602002e365d5a1e11e5ed98ce783700b7e72,TypeScript,Undetectable,"UI error. The contrast in the dark theme is too low. The fix changes the color via string literals.",79.0
