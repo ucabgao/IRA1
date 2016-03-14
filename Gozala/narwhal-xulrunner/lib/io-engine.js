@@ -1,3 +1,5 @@
+/* @flow */
+
 var Pipe = CC("@mozilla.org/pipe;1", "nsIPipe", "init");
 var BinaryOutputStream = CC("@mozilla.org/binaryoutputstream;1", "nsIBinaryOutputStream", "setOutputStream");
 var BinaryInputStream = CC("@mozilla.org/binaryinputstream;1", "nsIBinaryInputStream", "setInputStream");
@@ -5,6 +7,11 @@ var SeekableStream = Ci.nsISeekableStream;
 
 var BINARY = require("./binary-engine");
 var ByteString = require("./binary").ByteString;
+
+class o {
+    flush () :any {};
+}
+ 
 
 var IO = exports.IO = function(inputStream, outputStream) {
     this.inputStream = inputStream;
@@ -25,7 +32,7 @@ IO.prototype = {
         var bytes = this.binaryInputStream.readByteArray(readAll ? this.binaryInputStream.available() : length);
         return new ByteString(bytes, 0, bytes.length);
     },
-    copy: function(output, mode, options) {
+    copy: function(output:o, mode, options) {
         output.writeFrom(this.binaryInputStream, this.binaryInputStream.available());
         return this;
     },
