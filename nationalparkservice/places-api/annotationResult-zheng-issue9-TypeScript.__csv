@@ -1,0 +1,2 @@
+Project,Issue,Commit,TypeChecker,Detectable,Comment,AnnotationTime
+nationalparkservice/places-api,9,d8afcd3d18143f1da000912e945305f0747409bd,TypeScript,Undetectable,"EIS. Missing a parameter in the function further causes a type error subsequently,",604.0
