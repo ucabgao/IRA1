@@ -1,0 +1,2 @@
+Project,Issue,Commit,TypeChecker,Detectable,Comment,AnnotationTime
+CounterpartyXCP/counterwallet,705,08e879102694ab071495aa6a89ac92e61e72ae00,Flow,Undetectable,"EIS. Stuck on loading after logging out because of the wrong place of return",94.0
