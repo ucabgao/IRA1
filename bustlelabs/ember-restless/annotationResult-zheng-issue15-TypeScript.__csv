@@ -1,0 +1,2 @@
+Project,Issue,Commit,TypeChecker,Detectable,Comment,AnnotationTime
+bustlelabs/ember-restless,15,0349460b3a9b877f46f440acd93c573d4ff4edcb,TypeScript,Undetectable,"EIS. Both decamelize and pluralize are having the type string -> string. Therefore, the bug is not visible to these two type systems.",19.0
