@@ -1,0 +1,2 @@
+Project,Issue,Commit,TypeChecker,Detectable,Comment,AnnotationTime
+djaodjin/djaodjin-annotate,32,671c6bc597b9cd965e1597756d392bc3cb2941f8,Flow,Unknown,"If we are not constrained to add any annotations, the bug is detectable by annotating the variable 'newImage'. However, does this annotation  even make sense? This bug can serve as an example for Mark's suggestion. A bug is caught anywhere in the program, not in the same line or block with lines that are touched by the fix.",174.0
