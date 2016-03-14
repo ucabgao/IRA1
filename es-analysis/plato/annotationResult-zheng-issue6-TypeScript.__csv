@@ -1,0 +1,2 @@
+Project,Issue,Commit,TypeChecker,Detectable,Comment,AnnotationTime
+es-analysis/plato,6,8c2b68ebc170938d4115148f71846ed6247409ed,TypeScript,Undetectable,"Null handing. TypeScript does not support non-nullable annotation.",12.0
