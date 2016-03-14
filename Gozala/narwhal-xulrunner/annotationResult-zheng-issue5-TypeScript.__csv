@@ -1,0 +1,2 @@
+Project,Issue,Commit,TypeChecker,Detectable,Comment,AnnotationTime
+Gozala/narwhal-xulrunner,5,b9734c1884ce5f7df8bcc3ea7b2cc15be1a8239a,TypeScript,Detectable,"Construct such an annotation. IMPORTANT from the document: A nsIOutputStream is not required to implement writeFrom(). In some contexts, writeFrom may be guaranteed to be implemented, but in general it is not. This method serves as an optimization.",390.0
