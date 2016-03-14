@@ -1,0 +1,2 @@
+Project,Issue,Commit,TypeChecker,Detectable,Comment,AnnotationTime
+jfredrickson/minesweeper,1,2649c98e2f3c475906ec8a8eeeb6061076e830d5,Flow,Undetectable,"EIS. What are left from identifing all non-mines should be mines, and the player should win. Forgot to consider this situation.",23.0
