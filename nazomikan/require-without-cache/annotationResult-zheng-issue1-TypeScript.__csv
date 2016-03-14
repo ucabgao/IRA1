@@ -1,0 +1,2 @@
+Project,Issue,Commit,TypeChecker,Detectable,Comment,AnnotationTime
+nazomikan/require-without-cache,1,25d0e58d4d8f53add91f6334f1ad17117d8aadd5,TypeScript,Undetectable,"EIS. Bracket operators can be applied on strings. ",515.0
