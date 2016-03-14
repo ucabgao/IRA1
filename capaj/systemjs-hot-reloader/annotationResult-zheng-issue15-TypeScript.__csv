@@ -1,0 +1,2 @@
+Project,Issue,Commit,TypeChecker,Detectable,Comment,AnnotationTime
+capaj/systemjs-hot-reloader,15,37ed4bdb083cba297ed08a5b675f18b437ebf0c6,TypeScript,Undetectable,"Missing a predicate. Forgetting to check whether some modules have been deleted causes an infinite loop on cyclic dependencies",43.0
