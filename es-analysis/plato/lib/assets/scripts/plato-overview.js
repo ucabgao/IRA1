@@ -3,12 +3,14 @@
 /*global $:false, _:false, Morris:false, __report:false, Raphael:false */
 /*jshint browser:true*/
 
-class t {
+interface t {
     complexity : s;
 }
 
-class s {
+interface s {
 maintainability: ?number;
+                 module:any;
+                        aggregate:any;                                 
 }
 
 $(function(){

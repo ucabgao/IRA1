@@ -1,2 +1,3 @@
 Project,Issue,Commit,TypeChecker,Detectable,Comment,AnnotationTime
 es-analysis/plato,6,8c2b68ebc170938d4115148f71846ed6247409ed,Flow,Detectable,"Construct two classes  indicating maintainability can be null, which catch the bug.",309.0
+es-analysis/plato,6,8c2b68ebc170938d4115148f71846ed6247409ed,Flow,Detectable,"Improved annotation.",251.0
