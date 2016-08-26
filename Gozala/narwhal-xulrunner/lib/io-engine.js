@@ -8,8 +8,9 @@ var SeekableStream = Ci.nsISeekableStream;
 var BINARY = require("./binary-engine");
 var ByteString = require("./binary").ByteString;
 
-class o {
-    flush () :any {};
+interface o {
+    flush: any;
+    writeFrom: Object;
 }
  
 

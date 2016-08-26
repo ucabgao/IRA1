@@ -1,2 +1,3 @@
 Project,Issue,Commit,TypeChecker,Detectable,Comment,AnnotationTime
 Gozala/narwhal-xulrunner,5,b9734c1884ce5f7df8bcc3ea7b2cc15be1a8239a,Flow,Detectable,"Reference: https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIBinaryOutputStream https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIBinaryInputStream  The parameter 'output' for function 'copy' is of type 'nsIBinaryOutputStream '. Here, I am sure that it can be detected but short of time to do it. So I am lazy.",616.0
+Gozala/narwhal-xulrunner,5,b9734c1884ce5f7df8bcc3ea7b2cc15be1a8239a,Flow,Detectable,"improved annotations.",14.0
