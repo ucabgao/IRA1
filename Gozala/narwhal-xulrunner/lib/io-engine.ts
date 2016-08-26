@@ -7,21 +7,7 @@ var BINARY = require("./binary-engine");
 var ByteString = require("./binary").ByteString;
 
 interface o {
-setOutputStream(x:any):any;
-write8(x:any):any;
-write16(x:any):any;
-write32(x:any):any;
-write64(x:any):any;
-writeBoolean(x:any):any;
-writeByteArray(x:any, y:any):any;
-writeBytes(x:any, y:any):any;
-writeDouble(x:any):any;
-writeFloat(x:any):any;
-writeStringZ(x:any):any;
-writeUtf8Z(x:any):any;
-writeWStringZ(x:any):any;
-close():any;
-flush():any;
+writeFrom: Object;
 }
 
 var IO = exports.IO = function(inputStream, outputStream) {
