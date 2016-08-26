@@ -1,5 +1,9 @@
+interface o {
+    redirect: string;
+}
+
 interface l {
-search(search?: string | Object, paramValue?: string|number|string[]|boolean): any;
+search(search?: string | o, paramValue?: string|number|string[]|boolean): any;
 path(x?:string) : string;
 }
 /**
