@@ -415,8 +415,19 @@ exports.publish = function(tmp, board, cb) {
   });
 }
 
-class t {
- name: ?Object;
+interface t {
+ name: ?string;
+       lastmodified:any;
+                    due:any;
+                        pos:any;
+                            url:any;
+                                attachmentcover:any;
+                                                members:any;
+                                                        votecount:any;
+                                                                 voters:any;
+                                                                     attachments:any;
+                                                                                 comments:any;
+                                                                                          checklists:any;
 }
 
 /*** CARD COMPILER ***/
@@ -425,9 +436,9 @@ function buildcard(c, board, odata, u, i, j, finalcallback) {
   //TODO allow template to set the action limit
   var tmp = "tmp/" + board.id + "/";
 
-  util.trello("/cards/" + c.id + "?actions=commentCard,addAttachmentToCard,deleteAttachmentFromCard&actions_limit=1000&action_memberCreator_fields=fullName,initials,username,url&attachments=true&membersVoted=true&membersVoted_fields=fullName,initials,username,url&checklists=all&members=true&member_fields=fullName,initials,username,url", board.auth, odata, function(e, cr:t) {
+  util.trello("/cards/" + c.id + "?actions=commentCard,addAttachmentToCard,deleteAttachmentFromCard&actions_limit=1000&action_memberCreator_fields=fullName,initials,username,url&attachments=true&membersVoted=true&membersVoted_fields=fullName,initials,username,url&checklists=all&members=true&member_fields=fullName,initials,username,url", board.auth, odata, function(e, cr) {
     //get card
-    var card = { };
+    var card:t = { };
     card.name = cr.name;
     if (!s(card.name).startsWith("!"))
     {
